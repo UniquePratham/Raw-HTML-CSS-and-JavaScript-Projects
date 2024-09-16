@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise-1</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>This is Exercise-1</h1>
+    </div>
+    <div class="links">
+      <ul>
+        <li><a href="www.codewithpratham.com">link-1</a></li>
+        <li><a href="www.talkwithexpert.com">link-2</a></li>
+        <li><a href="www.helpfrompratham.com">link-3</a></li>
+        <li><a href="www.consultwithexpert.com">link-4</a></li>
+        <li><a href="www.programmingpratham.com">link-5</a></li>
+        <li><a href="www.expertcoders.com">link-6</a></li>
+        <li><a href="www.expertpratham.com">link-7</a></li>
+        <li><a href="www.codingislife.com">link-8</a></li>
+        <li><a href="www.codingwithpratham.com">link-9</a></li>
+        <li><a href="www.prathamconsultancy.com">link-10</a></li>
+      </ul>
+    </div>
+    <script>
+        console.log(Exercise-1);
+      // let a=document.links;
+      // let b=a.length;
+      // for(let i=0;i<=b-1;i++){
+      //     let str=String(document.links[i].href);
+      //     let check=str.includes("pratham");
+      //     if (check===true){
+      //         console.log(`This link includes pratham : ${str}`);
+      //     }
+      // }
+
+      let a = document.links;
+      Array.from(a).forEach(function (element) {
+        if (element.href.includes("pratham")) {
+          console.log("This link has word pratham : "+element.href);
+        }
+      });
+    </script>
+  </body>
+</html>

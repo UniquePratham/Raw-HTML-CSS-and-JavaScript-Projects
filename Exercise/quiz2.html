@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <table class="table table-primary table-sm">
+        <thead>
+            <tr>
+                <th scope="col">S.N.o</th>
+                <th scope="col">Fruits</th>
+            </tr>
+        </thead>
+        <tbody id="fruits">
+        </tbody>
+    </table>
+    <table class="table table-secondary">
+        <thead>
+            <tr>
+                <th scope="col">S.N.o</th>
+                <th scope="col">Vegetables</th>
+            </tr>
+        </thead>
+        <tbody id="vegetables">
+        </tbody>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script>
+        console.log("This is Quiz2");
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'fruits.json', true);
+        xhr.onload = function () {
+            if (this.status === 200) {
+                console.log("This is fruits");
+                let obj = JSON.parse(this.responseText);
+
+                let str = "";
+                let fruits = document.getElementById("fruits");
+                let tr = fruits.getElementsByTagName("tr");
+                for (let i = 0; i < obj.length; i++) {
+                    str += `<tr>
+                        <td>${i + 1}</td>
+                        <td>${obj[i]}</td>
+                           </tr>`;
+                }
+                fruits.innerHTML = str;
+            }
+            else {
+                console.error("Some error occured!");
+            }
+        }
+        xhr.send();
+        const xhr2 = new XMLHttpRequest();
+        xhr2.open('GET', 'vegetable.json', true);
+        xhr2.onload = function () {
+            if (this.status === 200) {
+                console.log("This is Vegatables");
+                let obj2 = JSON.parse(this.responseText);
+
+                let str2 = "";
+                let vegetables = document.getElementById("vegetables");
+                let tr = vegetables.getElementsByTagName("tr");
+                for (let i = 0; i < obj2.length; i++) {
+                    str2 += `<tr>
+                        <td>${i + 1}</td>
+                        <td>${obj2[i]}</td>
+                           </tr>`;
+                }
+                vegetables.innerHTML = str2;
+            }
+            else {
+                console.error("Some error occured!");
+            }
+        }
+        xhr2.send();
+    </script>
+</body>
+
+</html>

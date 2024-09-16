@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After pesudo selector</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+
+            background-color: black;
+            color:white;
+            font-weight: bold;
+            text-shadow: 1px 2px gray;
+        }
+        header::before{
+            content: "";
+            background: url(https://source.unsplash.com/random/1600x900/?fruit) no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+
+        }
+        .navigation{
+            font-size: 20px;
+            display: flex;
+            font-family: "Sofia";
+
+        }
+        li{
+            list-style: none;
+            padding: 20px 23px;
+        }
+        /* It is used to put content before or after the element or repective tag ; before is used to put it before and for after vice-versa  */
+        /* section::before{
+            content: "This is a Content";
+        } */
+        /* section::after{
+            content: "This is a Content";
+        } */
+        section{
+            height: 340px;
+            margin: 3px 245px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+            font-family: "Sofia";
+        }
+        h1{
+            font-size: 3.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Welcome to Coding World</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, autem fugiat earum alias amet aspernatur
+            possimus quisquam ipsam velit exercitationem soluta enim voluptate, ratione esse eveniet. Ducimus cumque
+            saepe ipsam, illo voluptas rerum nemo cum dolores, velit tempora recusandae distinctio?</p>
+    </section>
+    <hr>
+</body>
+
+</html>

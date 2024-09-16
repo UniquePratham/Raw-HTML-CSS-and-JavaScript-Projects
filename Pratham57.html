@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await</title>
+</head>
+
+<body>
+    <script>
+        console.log('This is Async / Await Tutorial');
+        // Async always returns a promise
+        // Inside async, await is handled asynchronously
+        async function pratham() {
+            console.log('Inside pratham function');
+            const response = await fetch('https://api.github.com/users');
+            console.log('Before Response');
+            const users = await response.json();
+            console.log('User resolved');
+            return users;
+            // return "Pratham";
+        }
+        console.log('Before calling pratham');
+        let a = pratham();
+        console.log('After calling pratham');
+        console.log(a);
+        a.then((data) => console.log(data))
+        console.log('The last line of the code');
+    </script>
+</body>
+
+</html>

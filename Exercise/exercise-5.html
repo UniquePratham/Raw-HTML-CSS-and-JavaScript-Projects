@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise-5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        text-decoration: underline;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        padding: 3px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .result {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <h1>Pratham's Dictionary</h1>
+    <div class="container">
+        <div class="input-group mb-3 m-3">
+            <span class="input-group-text" id="basic-addon1">Search Word Here</span>
+            <input type="text" class="form-control" placeholder="Enter Your Word to Know !" aria-label="Words"
+                aria-describedby="basic-addon1" id="inputSearch">
+        </div>
+        <div>
+            <button type="button" class="btn btn-light" id="search">Search</button>
+        </div>
+    </div>
+    <div class="result">
+        <table class="table-dark">
+            <thead class="p-2 m-2">
+                <tr>
+                    <th scope="col" class="p-2 m-2"> S.N.o </th>
+                    <th scope="col" class="p-2 m-2"> Defination </th>
+                </tr>
+            </thead>
+            <tbody id="tableBody" class=" p-2 m-2">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="exercise-5i.js"></script>
+    <!-- <script src="exercise-5ii.js"></script> -->
+</body>
+
+</html>

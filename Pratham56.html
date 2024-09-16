@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+
+<body>
+    <script>
+        console.log('Fetch API Tutorial');
+        // Simple local GET request using Fetch API
+        // function getData() {
+        //     console.log('Started getData');
+        //     url = "Cutie.txt"
+        //     fetch(url).then((response) => {
+        //         console.log('Inside First then');
+        //         return response.text();
+        //     }).then((data) => {
+        //         console.log(data);
+        //         console.log('Inside Second then');
+        //     })
+        // }
+        // console.log('Before running getData');
+        // getData();
+        // console.log('After running getData');
+
+        // Simple url GET request using Fetch API
+        // Fetch GET Request takes only url parameter
+        function getData() {
+            console.log('Started getData');
+            // url = "https://api.github.com/users"
+            url = "https://fakestoreapi.com/products"
+            fetch(url).then((response) => {
+                console.log('Inside First then');
+                // if we use json here; it will parse the json into object & show it as object
+                // but if we use text here; it will show it on plain text
+                // it is used when the request is returning a valid json - No tension to use Json.stringify,Json.parse
+                return response.json();
+            }).then((data) => {
+                console.log(data);
+                console.log('Inside Second then');
+            })
+        }
+        console.log('Before running getData');
+        getData();
+        console.log('After running getData');
+
+        // Simple url POST request with data using Fetch API
+        // Fetch POST Request takes url and one more parameter for data
+        // function postData() {
+        //     console.log('Started postData');
+        //     url = "https://reqres.in/api/users"
+        //     data = {
+        //         "name": "pratham",
+        //         "job": "leader"
+        //     }
+        //     params = {
+        //         method: 'post',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //             // 'Content-Type': 'application/x-www-form-urlencoded'
+        //         },
+        //         // if data to be send is object then used Json.stringify here
+        //         // otherwise, if data to be send is string then no need to use Json.stringify direct || body:data ||
+        //         body: JSON.stringify(data)
+        //     }
+        //     fetch(url, params).then(response => response.json()).then(data => console.log(data))
+        // }
+        // console.log('Before running postData');
+        // postData();
+        // console.log('After running postData');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#navbar {
+    /* position: sticky;
+    top: 0px;
+    z-index: 100; */
+    background-color: hotpink;
+    padding: 13px 5px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    color: floralwhite;
+    text-shadow: -2px -1px black;
+    align-items: center;
+    padding: 0px 10px;
+    font-size: 1.5rem;
+    margin-right: 40px;
+}
+
+#logo img {
+    height: 38px;
+    filter: invert(1);
+}
+
+#navbar li {
+    list-style: none;
+}
+
+#navbar li a {
+    text-decoration: none;
+    padding: 3px 25px;
+    color: floralwhite;
+    text-shadow: -2px -1px black;
+    font-weight: 100;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+#navbar li a:hover {
+    color: black;
+    text-shadow: 2px 1px floralwhite;
+}
+
+#introSection {
+    position: relative;
+    height: 800px;
+    width: 100%;
+    background: center / cover no-repeat url("/static/danceacademy.jpg");
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+    text-shadow: 2px 1px black;
+    overflow: visible;
+}
+
+#Quote {
+    position: relative;
+    margin: 30px 0px;
+    font-size: 2rem;
+}
+
+#Bright {
+    position: absolute;
+    top: 30%;
+    height: 400px;
+    width: 500px;
+}
+
+.welcomeTo {
+    position: absolute;
+    color: fuchsia;
+    text-shadow: 2px 1px white;
+}
+
+.welcome {
+    font-size: 10rem;
+    top: 5%
+}
+
+.To {
+    font-size: 6rem;
+    top: 25%;
+}
+
+#missionSection {
+    height: 648px;
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#missionSection h2 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 3.5rem;
+    color: antiquewhite;
+    text-shadow: 2px 1px black;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 65px;
+}
+
+.card {
+    border-radius: 15px;
+    border: 2px solid black;
+    margin: 40px 25px;
+    padding: 10px;
+    width: 25vw;
+    height: 300px;
+    background-color: indianred;
+}
+
+.card h3 {
+    color: aqua;
+    text-shadow: 1px 1px black;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+}
+
+.cardBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.cardImg {
+    height: 130px;
+    padding: 7px 5px;
+    margin: 7px;
+}
+
+.cardImg img {
+    height: inherit;
+}
+
+.cardContent {
+    padding: 0px 10px;
+}
+
+.cardContent p {
+    font-size: 0.9rem;
+    color: sandybrown;
+    text-shadow: 1px 1px black;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+}
+
+#sponsorsSection {
+    height: 648px;
+    background-color: deeppink;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#sponsorsSection h2 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 3.5rem;
+    color: antiquewhite;
+    text-shadow: 2px 1px black;
+    text-decoration: underline;
+}
+
+#sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px;
+    padding: 30px;
+}
+
+#sponsors1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#sponsors2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.spImage {
+    margin: 40px;
+    padding: 10px;
+    height: 70px;
+}
+
+#footer {
+    height: 60px;
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}

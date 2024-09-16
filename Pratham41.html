@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in JS</title>
+</head>
+
+<body>
+    <div class="container">
+        This is about Loops
+    </div>
+    <script>
+        console.log("This is Tutorial for Loops in JavaScript");
+        // Simple for loop
+        // let i=0;
+        // for(i=0;i<3;i++){
+        //     console.log(i);
+        // }
+
+        // To add 1 method's
+        // 1. a += 1;
+        // 2. a++;
+        // 3. a=a+1;
+
+        // How to iterate over arrays using traditional method
+        let friends = ["Pratham", "Adarsh", "Sahil", "Kunal", "Dishant"];
+        // for (let index = 0; index < friends.length; index++) {
+        //     console.log("Hello Friend, "+ friends[index]);
+
+        // }
+
+        // How to iterate over arrays using forEach method
+        // friends.forEach(function f(element) {
+        //     console.log("Hello Friend, " + element + " to modern JavaScript");
+        // })
+
+        // How to iterate over arrays using for-of method
+        // for (element of friends) {
+        //     console.log("Hello Friend, " + element + " to modern JavaScript again");
+        // }
+
+        let employee = {
+            name: "Pratham",
+            salary: "1 Cr",
+            profession: "Programming"
+        };
+        // How to iterate over objects using for-in method
+        // for (key in employee){
+        //     console.log(`The ${key} of employee is ${employee[key]} `);
+        // }
+
+        // While Loop in JS
+        // i=0;
+        // while (i<4) {
+        //     console.log(`${i} is less than 4`);
+        //     i++;
+        // }
+
+        // Do-While Loop in JS
+        // It always print its first value either true or false
+        // j = 34;
+        // j = 0;
+        // do {
+        //     console.log(`${j} is less than 4 and we are inside do-while loop`);
+        //     j++;
+        // } while (j < 4);
+
+        // To break the statement in the running loop; use
+        // break;
+
+        // When you want to skip an iteration in loop; use
+        // continue;
+
+        // Array.from
+        // let name = "Pratham";
+        // let arr = Array.from(name);
+        // console.log(arr);
+
+        // Higher Order Array Methods
+        // Map(), Filter(), Reduce()
+
+        // 1. Map (Array Map Method) 
+        let arr = [45, 23, 31];
+        // console.log(arr);
+        // console.log(typeof arr);
+        // let a = arr.map((value, index, array) => {
+        //     console.log(value, index, array);
+        //     return value + 1;
+        // })
+        // console.log(typeof a);
+        // console.log(a);
+        // Index and Array are optional for this at the time of assigning arguments in function
+        // Note - Difference Between For Loop & Map is Map creates new array whereas For Loop Doesn't
+
+        // 2. Filter (Array Filter Method)
+        let arr2 = [45, 23, 21, 0, 3, 5];
+        // let a2 = arr2.filter((a) => {
+        //     return a < 10;
+        // })
+        // console.log(a2);
+        // It filters the elements in the array and checks whether the condition is fulfilled in the function or not
+        // and creates a new array by filtering other elements which doesn't satisfies the fucntion condition
+
+        // 3. Reduce (Array Reduce Method)
+        // It reduces an array to a single value
+        let arr3 = [1, 2, 3, 5, 2, 1];
+        // const reduce_func = (h1, h2) => {
+        //     return h1 + h2;
+        // }
+        // let newarr3 = arr3.reduce(reduce_func);
+        // console.log(newarr3);
+    </script>
+</body>
+
+</html>

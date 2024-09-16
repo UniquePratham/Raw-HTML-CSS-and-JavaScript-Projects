@@ -1,0 +1,5 @@
+Make maximum bookmark as 3
+remove tomakebookmark icon when maximum limit is reached from all the remaining notes
+show tomakebookmark icon when when bookmark is less than 3 to all the remaining notes
+when maximum limit is reached pop out warning maximum message and pop up message when bookmarked
+

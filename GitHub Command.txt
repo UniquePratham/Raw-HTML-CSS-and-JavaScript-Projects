@@ -1,0 +1,23 @@
+touch .gitignore
+git config --global user.name yourName
+git config --global user.name "Pratham Agarwal"
+git config --global user.email youremail@example.com
+git config --global user.email "gargpratham71@gmail.com"
+git init
+git add .
+git commit -m "Initial Commit"
+git status # Just to see
+ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
+ssh-keygen -t rsa -b 4096 -C "gargpratham71@gmail.com"
+tail <path to id_rsa.pub> # Add this key to your GitHub account
+git remote add orign <ssh url.git>
+git push origin master
+
+
+// change Name
+git config --global --replace-all user.name "new_name"
+git config --global --replace-all user.name "Pratham Agarwal"
+
+//change Email
+git config --global --replace-all user.email "new@mail.com"
+git config --global --replace-all user.email "gargpratham71@gmail.com"

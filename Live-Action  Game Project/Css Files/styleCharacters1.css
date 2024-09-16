@@ -1,0 +1,20 @@
+.gameHero {
+  background: url(../Resource/AyushHero.png) no-repeat;
+  background-size: cover;
+  width: 5rem;
+  height: 13rem;
+  position: absolute;
+  bottom: -0.35rem;
+  left: 28rem;
+  transition: all 0.5s ease-in-out;
+}
+.gameVillain {
+  transition: all 0.2s ease;
+  background: url(../Resource/PiyushVillain.png) no-repeat;
+  background-size: cover;
+  width: 7rem;
+  height: 13rem;
+  position: absolute;
+  bottom: -0.35rem;
+  right: 27rem;
+}

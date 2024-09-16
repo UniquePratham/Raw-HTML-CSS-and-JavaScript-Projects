@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorials | Arrays & Objects</title>
+</head>
+
+<body>
+    <div class="container"> simple si html</div>
+    <script>
+        // These are the examples of primitive data type
+        let myVar = 34;
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        // Anything other than primitive data type is an object which is called reference date type
+        let employee = {
+            name: "Pratham",
+            salary: 10,
+            food: "Momo",
+            "hobby aim": "Programming",
+        };
+        // console.log(employee);
+
+        // If no space in the names then can use any of two 
+        // employee.food
+        // 'Momo'
+        // employee.hobby
+        // 'Programming'
+        // employee['food']
+        // 'Momo'
+        // employee['hobby']
+        // 'Programming'
+
+        // If there is space in the names then you sholud use this only 
+        // employee['food']
+        // 'Momo'
+        // employee['hobby']
+        // 'Programming'
+
+        // An Special type of an object with a unique name (Array)
+        let names = [41, 2, 4, "Pratham", true, null, undefined];
+        let titles = ["HeroPanti", "Drishayam", 69, 22];
+        // let names=new Array(9000,40000,20000,"Pratham",true,null,undefined);
+
+        // console.log(names);
+        // If you want to print values using index then;
+        // console.log(names[3]);
+
+        // If you want to know how much elements are there in a array then;
+        // console.log(names.length);
+        // If you want to sorts the elements in a array then;
+        // names=names.sort();
+        // console.log(names);
+        // To sort the numbers in ascending/descending order in a array consisting numbers, we must give a compare function
+        // let compareAscending = (a, b) => {
+        //     return a - b;
+        // }
+        // let compareDescending = (a, b) => {
+        //     return b - a;
+        // }
+        let numbers = [1, 45, 556, 2, 90, 36, 233, 10];
+        // numbers.sort();
+        // It will be sort the numbers alphabetically
+        // console.log(numbers);
+        // To sort in Ascending Order
+        // numbers.sort(compareAscending);
+        // console.log(numbers);
+        // To sort in Descending Order
+        // numbers.sort(compareDescending);
+        // console.log(numbers);
+
+        // If you want to add an element in a array at the end then;
+        // names.push("This is pushed");
+        // console.log(names);
+
+        // If you want to remove an element in a array from the end then;
+        // console.log(names);
+        // names.pop();
+        // console.log(names);
+
+        // If you want to add an element in a array at the front then;
+        // names.unshift("This is unshifted");
+        // console.log(names);
+
+        // If you want to remove an element in a array from the front then;
+        // console.log(names);
+        // names.shift();
+        // console.log(names);
+
+        // If you want to remove an element in a array from a given positon or index number then
+        // Note - It will start removing the elements mentioned from the index number
+        // arrayName.splice('position'/'index value',number of elements to remove)
+        // names.splice(1,3);
+        // console.log(names);
+
+        // It will make an array with elements 23 & 45
+        // let names=new Array(23,45);
+
+        // It will make an array of 23 vacant elements
+        // let names=new Array(23);
+        // console.log(names);
+
+        // To check whether the given data is an array or not
+        // console.log(Array.isArray(names));
+
+        // To find the index of any element of an array
+        // let indexValue = arrayName.indexOf(4);
+        // let indexValue = names.indexOf(4);
+        // console.log(indexValue);
+
+        // To reverse an array
+        // names.reverse();
+        // console.log(names);
+
+        // To check whether the given data is object or not
+        // objectname.isActive
+
+        // To delete any specific element
+        // delete names[1];
+        // console.log(names);
+        // Note - After Deleting an element from the Array, Still the Length of the Array remains the same that is its position of the element is vacant and its shows empty but its shadow is always there making the length of the array still the same.
+
+        // To combine one array with another array to make a new array, we use concat
+        // let newArray = names.concat(titles);
+        // console.log(newArray);
+
+        // To slice the piece from an array as it slices the array that is from given index number to the last index number if given a single number or to the index number just before the second given number and creates a new array
+        // let slicedNames = numbers.slice(3);
+        // let slicedNames = numbers.slice(3,6);
+        // console.log(slicedNames);
+    </script>
+</body>
+
+</html>

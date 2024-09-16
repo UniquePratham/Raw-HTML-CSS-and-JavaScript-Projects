@@ -1,0 +1,46 @@
+when add button is clicked check local storage whether clear or not
+
+      if Local storage is clear then check for validation then savetols directly
+
+      if Local storage is not clear then check for validation first then 
+
+             if Validation is clear then check for duplicate then
+
+                     if duplicate is clear then savetols
+                     
+                     if duplicate is not clear then show alert
+
+             if Validation is not clear then show alert
+
+
+Display.alert('danger', 'Book Cannot be added !', ' Minimum 5 characters are required !!!');
+
+ Display.alert('danger', 'Same Book Name cannot be added!!!', 'Duplicate Book Entry Found!');
+
+ create deleteYes function
+ create deleteNo function
+ onclick x button 
+
+ let YesNoTag=document.getElementById("Yes");
+        YesNoTag.addEventListener("click",)
+
+
+        .alert('danger', 'Deletion Un-successful! ', ' Your Book not deleted !');
+        .alert('danger', 'Deletion Un-successful! ', ' Your Book not deleted !');
+}
+
+// Creating alert function
+function alert(type, boldMessage, backMessage) {
+    // console.log("Alert function");
+    let alertbox = document.getElementById("alertbox");
+    let msg = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
+    <strong> ${boldMessage} </strong> ${backMessage} 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times</span></button>
+    </div>`;
+    alertbox.innerHTML = msg;
+    setTimeout(() => {
+        alertbox.innerHTML = ``;
+    }, 3000);
+}
+
+We can use MapBox to display map on our website

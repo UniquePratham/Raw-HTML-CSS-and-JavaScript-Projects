@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Regular Expressions & Related Functions Tutorial</title>
+</head>
+
+<body>
+    <script>
+        console.log('This is Regular Expression Tutorial');
+        let reg = /pratham/; //This is a regular expression literal in J.S
+        // reg = /pratham/g; // g - it is a flag which means it is used for global 
+        // reg = /pratham/i; // i - it is a flag which means its case-insensitive
+        // console.log(reg);
+        // reg.source means inside content of regular expression. In this case, its {pratham}
+        // console.log(reg.source);
+
+        let string = "This is great code with pratham and also pratham bhai";
+
+        // Functions to match expressions
+
+        // 1. exec() --> This function will return an array for first match or null for no match
+        // if no match, null is returned for looping using while loop untill its null
+        // we have to run it 2nd time, 3rd time an more for the required time of result while using "g" global flag is necessary for this
+        let result = reg.exec(string);
+        // console.log(result);
+
+        // If not matches & then you ask for result.index, result.input then it will throw an error !!! So,
+        if (result) {
+            // console.log(result.index);
+            // console.log(result.input);
+        }
+
+        // We can use multiple exec with global flag
+        // 2nd time used for 2nd finding
+        // result = reg.exec(string);
+        // console.log(result);
+
+
+        // 2. test() --> This function returns true if matches & false if not
+        // This will only print true if the reg is present there in the string 
+        let result2 = reg.test(string);
+        // console.log(result2);
+
+        // 3. match() --> This function will return an array of results matching or null when no match  
+        // It will return array of all the results of matches when used with global flag
+        // let result3 = reg.match(string); --> This is Wrong!!!
+        let result3 = string.match(reg); // --> This is Right!!!
+        // console.log(result3);
+
+        // 4. search() --> This function will returns the index of first match else returns -1
+        // let result4 = reg.search(string); --> This is Wrong!!!
+        let result4 = string.search(reg); // --> This is Right!!!
+        // console.log(result4);
+
+        // 5. replace() --> This function will replace the matchItem with the givenItem for the first match
+        // Returns new replaced string with the first match replacement
+        // If all the match should be replaced, We should use global flag
+        // If no global flag is given then only first match will be replaced
+        let result5 = string.replace(reg, 'Agarwal');
+        // console.log(result5);
+
+        // Quiz
+        let statement = "My Name is Ram. Ram is Very Good Boy";
+        let regular = /Ram/g;
+        console.log(regular.exec(statement));
+        console.log(regular.test(statement));
+        console.log(statement.match(regular));
+        console.log(statement.search(regular));
+        console.log(statement.replace(regular, 'Shyam'));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Symbols Tutorial</title>
+</head>
+
+<body>
+    <script>
+        console.log('This is JavaScript Symbols Tutorial');
+        // Symbols : It helps us to make unique keys (unique primitive)
+
+        // We can use 'new' keyword as it will show an error because Symbol is a primitive & not reference type & not a constructor as well
+        // Initializing the Symbol without identifier i.e blank or empty Symbol
+        // const sym1 = Symbol();
+        // Initializing the Symbol with identifier 
+        const sym1 = Symbol('My Identifier');
+        console.log('Symbol is ', sym1);
+
+        // Type of Symbol
+        console.log('Type of Symbol is ', typeof sym1);
+
+        // Everytime, You initialize the Symbol, it will be unique itself i.e
+        const sym2 = Symbol('My Identifier');
+        // Here it seems like sym1 is equal to sym2 but its not, they both are unique by itself i.e
+        console.log('Is sym1 equal to sym2 ? ->', sym1 === sym2);
+        // It will return false as not equal
+
+        // For Example, checking for a string
+        const a = 'this is';
+        const b = 'this is';
+        console.log('Is a equal to b ? ->', a === b);
+        // It will return true as equal
+        console.log('Is 4 equal to 4 ? ->', 4 === 4);
+        console.log('Is true equal to true ? ->', true === true);
+        console.log('Is false equal to false ? ->', false === false);
+        console.log('Is undefined equal to undefined ? ->', undefined === undefined);
+        console.log('Is null equal to null ? ->', null === null);
+
+        // Using symbol for making values of object 
+        // You can keep it blank as well
+        // const k1 = Symbol();
+        // const k2 = Symbol();
+        const k1 = Symbol('Identifier for k1');
+        const k2 = Symbol('Identifier for k2');
+        myObj = {};
+        myObj[k1] = "Pratham";
+        myObj[k2] = "Agarwal";
+        myObj["name"] = "Good Boy";
+        myObj[4] = "Good Integer";
+        console.log(myObj);
+        console.log(myObj[k1]);
+        console.log(myObj[k2]);
+        console.log(myObj["name"]);
+        // You cannot do this to get "Agarwal" as it searches for k2 string and it is exactly same as myObj["k2"]
+        console.log(myObj.k2);
+        // It will give undefined
+
+        // Using For...In Loop 
+        // Symbols are ignored in For...In Loop
+        for (key in myObj) {
+            console.log(key, myObj[key]);
+        }
+
+        // Converting an Object in JSON
+        console.log(JSON.stringify(myObj));
+    </script>
+</body>
+
+</html>

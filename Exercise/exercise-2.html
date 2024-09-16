@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise-2</title>
+  </head>
+  <body>
+    <h1>Welcome to codewithpratham</h1>
+    <script>
+      console.log("Exercise-2");
+
+      //   let div = document.createElement("div");
+      //   div.id = "clicked";
+      //   let heading = document.querySelector("div");
+      //   heading.appendChild(div);
+      //   let div2=document.getElementById("clicked");
+      //   div2.style.width=('500px');
+      //   div2.style.height=('500px');
+      //   div2.style.border=("2px solid red");
+
+      //   document.getElementById("clicked").addEventListener("click", func1);
+      //   function func1(element) {
+      //     let divClick = document.getElementById("clicked");
+      //     divClick.innerHTML =
+      //       '<textarea name="editableitem" id="editableitem" cols="30" rows="10"></textarea>';
+      //   }
+      //   document.getElementById("clicked").addEventListener("blur", func2);
+      //   function func2(element) {
+      //     let divClick = document.getElementById("click");
+      //     let savethenote = localStorage.setItem("setthenote",editableitem);
+      //   }
+
+      //   Creating a new div element
+      let div = document.createElement("div");
+
+      //   Adding Text to the created element
+      let val = localStorage.getItem("text");
+      let text;
+      if (val == null || val=="") {
+        text = document.createTextNode("This is my element. Click to edit");
+      } else {
+        text = document.createTextNode(val);
+      }
+      div.appendChild(text);
+
+      //   Apppending created element to body after h1 / Grabbing the main container
+      let script = document.querySelector("script");
+      let body = document.querySelector("body");
+      body.insertBefore(div, script);
+
+      //   Giving element id & style
+      div.id = "clicked";
+      div.setAttribute(
+        "style",
+        "border:2px solid black; width: 154px; margin: 34px; padding:23px;"
+      );
+
+      //   Adding eventListener to created element
+      let div2 = document.getElementById("clicked");
+      div2.addEventListener("click", func1);
+
+      function func1() {
+        let noTextAreas = document.getElementsByClassName("textarea").length;
+        if (noTextAreas == 0) {
+          let html = div2.innerHTML;
+          div.innerHTML = `<textarea class="textarea" id="textarea" rows="3">${html}</textarea>`;
+        }
+        //   eventListener for the blur event on textarea
+        let textarea = document.getElementById("textarea");
+        textarea.addEventListener("blur", func2);
+
+        function func2() {
+          clicked.innerHTML = textarea.value;
+          //   div2.innerHTML = textarea.value;
+          localStorage.setItem("text", textarea.value);
+        }
+      }
+    </script>
+  </body>
+</html>

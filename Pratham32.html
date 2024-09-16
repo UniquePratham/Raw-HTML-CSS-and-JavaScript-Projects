@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+</head>
+<style>
+    .container {
+        display: grid;
+        gap: 1rem;
+        grid-template-areas: 
+        'navbar navbar navbar navbar'
+        'section section section aside'
+        'section2 section2 section2 aside'
+        'footer footer footer footer';
+    }
+
+    .item {
+        background-color: yellow;
+        border: 2px solid green;
+        padding: 10px;
+    }
+    #navbar{
+        grid-area: navbar;
+    }
+    #section{
+        grid-area: section;
+    }
+    #section2{
+        grid-area: section2;
+    }
+    #aside{
+        grid-area: aside;
+    }
+    footer{
+        grid-area: footer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="navbar" class="item">
+            Home About ContactUs Reviews
+        </div>
+        <div id="section" class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nesciunt sint magni corrupti qui, doloribus numquam. Consectetur repudiandae quisquam repellat earum vel sit blanditiis quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, exercitationem! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus perspiciatis libero aliquam sed voluptas doloremque, corporis, quos eligendi debitis et explicabo repellat eum inventore neque ex temporibus. Molestias minima eos velit enim doloribus tempora deleniti laudantium iure quaerat sit sunt magnam vero sint placeat maiores commodi sapiente reiciendis, natus ex esse fuga laboriosam. Quod ducimus quibusdam libero cumque consequuntur distinctio minus nulla earum minima, soluta doloremque ipsa. Eligendi, sit vitae! Eos, velit facilis asperiores accusamus beatae atque! Odit vel dolor fugiat sit sequi accusantium! Error at excepturi mollitia soluta accusantium tempora fugit delectus iure omnis sunt. Nostrum, accusantium optio veritatis quam nesciunt dignissimos, architecto delectus sequi eaque minima repellat ullam obcaecati asperiores. Sit earum voluptatibus unde nemo quam atque ratione quas, consectetur ex suscipit praesentium recusandae veritatis exercitationem nostrum, doloremque eaque deleniti sunt. Quo repellat alias eos quidem porro, libero tempora delectus dolor totam quaerat vero provident natus vitae ab!
+        </div>
+        <div id="section2" class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nesciunt sint magni corrupti qui, doloribus numquam. Consectetur repudiandae quisquam repellat earum vel sit blanditiis quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, exercitationem! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium natus vitae aliquid, esse eos totam quas dolorem. Delectus laudantium blanditiis, officia quos cumque tenetur modi asperiores nulla! Necessitatibus quae voluptatem vero atque ab non nisi similique, tempore repellat, culpa unde! Et modi ipsa minima optio. Provident, officia praesentium? Quaerat, tenetur? Aliquam officiis tenetur officia incidunt tempora similique praesentium vel quo nemo, asperiores adipisci deleniti voluptatem repellat atque ad, veniam consequuntur perspiciatis, autem a hic fuga ipsum vitae cumque. Adipisci minima eius distinctio explicabo inventore fuga ratione repellat consequatur vero odio. Debitis voluptas mollitia voluptatem perspiciatis explicabo rerum voluptatibus ducimus praesentium saepe totam aut quasi error excepturi, dolor vel, incidunt, nostrum distinctio repellat. Rem soluta aut doloribus quasi hic perferendis nam et architecto excepturi assumenda quos eius id libero blanditiis, culpa quis porro, sint quas. Alias ea similique error quod repudiandae ipsa aspernatur blanditiis animi, esse amet, cupiditate commodi magnam accusamus.
+        </div>
+        <div id="aside" class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nesciunt sint magni corrupti qui, doloribus numquam. Consectetur repudiandae quisquam repellat earum vel sit blanditiis quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, exercitationem! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt in asperiores culpa aut, praesentium porro distinctio, exercitationem excepturi consequuntur odit eius ullam, laudantium eos iusto laborum repellendus dolore assumenda accusamus sequi nam! Qui aut fugiat ipsum porro unde necessitatibus iure vero consequatur similique perspiciatis dolore voluptatibus voluptate, velit quidem voluptatum excepturi, laborum adipisci beatae eligendi repellendus? Iste corporis maiores doloremque eos voluptatum amet officia tempora! Qui tenetur recusandae, veritatis minima aspernatur eius earum voluptatum et suscipit? Qui voluptate doloribus perferendis modi culpa! Exercitationem cupiditate ullam fugit recusandae eos pariatur architecto autem consequatur, accusamus id, amet itaque reprehenderit minima necessitatibus nulla?
+        </div>
+        <footer class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, odio!
+        </footer>
+    </div>
+</body>
+
+</html>

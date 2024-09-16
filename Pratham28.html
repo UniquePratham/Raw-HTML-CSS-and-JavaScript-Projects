@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+  </head>
+  <style>
+    .container {
+      display: grid;
+      /* The below commands means makes 3 columns and divide the items / number of items in these 3 columns and make width of 1st column items - 300 px and remaining 2nd and 3rd column items - 100px */
+      /* grid-template-columns: 300px 100px 100px; */
+
+      /* The below commands means makes 3 columns and divide the items / number of items in these 3 columns and make width of 1st column items - 300 px,  2nd column items - 200 px and 3rd column items - 100px */
+      /* grid-template-columns: 300px 200px 100px; */
+
+      /* The below commands means makes 3 columns and divide the items / number of items in these 3 columns and make width of 1st column items - 300 px, 2nd column items - 100 px and 3rd column items will automatically take it place or position or width accordingly (remaining place) after giving the width required for 1st and 2nd column*/
+      /* grid-template-columns: 300px 100px auto; */
+
+      /* The below commands means makes 3 columns and divide the items / number of items in these 3 columns and make width of 1st column items - 300 px, 2nd column items will automatically take it place or position or width accordingly (remaining place) after giving the width required for 1st and 3rd column and 3rd column items - 100 px */
+      /* grid-template-columns: 300px auto 100px; */
+
+      /* We can use fr unit to write in ratio (fr-fraction) */
+      /* grid-template-columns: 1fr 4fr 1fr; */
+
+      /* If we want to give single width to every number of column, we can use repeat functon */
+
+      /* The below commands means makes 4 columns and divide the items / number of items in these 4 columns and make the width of every column items - 100px  */
+      /* grid-template-columns: repeat(4,100px); */
+
+      /* The below commands means makes 10 columns and divide the items / number of items in these 4 columns and the width of every column items will automatically takes their place dividing themselves*/
+      grid-template-columns: repeat(10, auto);
+
+      /* To create gaps between grid columns, we can use gap */
+      gap: 2rem;
+    }
+    .item {
+      border: 2px solid black;
+      background-color: red;
+      color: white;
+      margin: 5px;
+      padding: 5px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="item">This is Item-1</div>
+      <div class="item">This is Item-2</div>
+      <div class="item">This is Item-3</div>
+      <div class="item">This is Item-4</div>
+      <div class="item">This is Item-5</div>
+      <div class="item">This is Item-6</div>
+      <div class="item">This is Item-7</div>
+      <div class="item">This is Item-8</div>
+      <div class="item">This is Item-9</div>
+      <div class="item">This is Item-10</div>
+      <div class="item">This is Item-1</div>
+      <div class="item">This is Item-2</div>
+      <div class="item">This is Item-3</div>
+      <div class="item">This is Item-4</div>
+      <div class="item">This is Item-5</div>
+      <div class="item">This is Item-6</div>
+      <div class="item">This is Item-7</div>
+      <div class="item">This is Item-8</div>
+      <div class="item">This is Item-9</div>
+      <div class="item">This is Item-10</div>
+      <!-- <div class="item">This is Item-11</div>
+        <div class="item">This is Item-12</div> -->
+    </div>
+  </body>
+</html>

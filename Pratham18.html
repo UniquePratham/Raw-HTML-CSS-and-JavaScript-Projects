@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units</title>
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        .container {
+            font-size: 10px;
+            border: 2px solid red;
+            /* vw means viewport width */
+            width: 100vw;
+            /* vh means viewport height */
+            height: 100vh;
+        }
+
+        h1 {
+
+            text-align: center;
+        }
+
+        #first {
+            font-size: 5em;
+            /* em means it expands the font that is it multiply the font by the font size of the just upper parent class or id and for the given example ; the parent class is .container and it will multiply the 5 of 5em by font-size of .container that is 10px resulting it to be 50px for 5em font-size in id #first*/
+            /* Again, if we give padding here just below the font-size of id #first with units as em then; */
+            /* padding: 2em; */
+            /* Here  em will work for the font-size within id #first that is 5em . First it will calculate 5em into pixels; which is 50px which is later multiplied by 2 for 2em resulting it to be 100px for padding; And this is just because em follows font-size of parent class or id  just upper or above it.*/
+
+        }
+
+        #second {
+            font-size: 3rem;
+            /* rem means it expands the font that is it multiply the font by the font size of the main/root element and for the given example ; the main/root element is html and it will multiply the 3 of 3rem by font-size of html that is 20px resulting it to be 60px for 3rem font-size in id #second*/
+            /* Again, if we give padding here just below the font-size of id #second with units as rem then; */
+            /* padding: 4rem; */
+             /*Unlike em , Here rem will work for the font-size of main/root element that is 20px . So it will calculate 4rem into pixels by multiplying 20px by 4 becaouse 20px is the font-size of main/root element and for 4rem resulting it to be 80px for padding; And this is just because rem follows font-size of main/root element always.*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="third">This is third heading</h1>
+    </div>
+</body>
+
+</html>

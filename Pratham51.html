@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      JavaScript | Object Literals, Constructers, Object Oriented Programming,
+      Object Prototype, Prototype Inheritance
+    </title>
+  </head>
+  <body>
+    <div class="container">This is a container</div>
+    <script>
+      // Object Literal for creating Objects
+      let car = {
+        name: "Maruti 800",
+        topSpeed: 90,
+        run: function () {
+          console.log("Car is running");
+        },
+      };
+      // We have already seen constructors like these:
+      // new Date();
+
+      // Creating a constructor for cars
+      function GeneralCar(givenName, givenSpeed) {
+        this.name = givenName;
+        this.topSpeed = givenSpeed;
+        this.run = function () {
+          console.log(`${this.name} is running`);
+        };
+        this.analyze = function () {
+          console.log(
+            `This car is slower by ${200 - this.topSpeed} kmph than Mercedes`
+          );
+        };
+      }
+      car1 = new GeneralCar("Nissan", 180);
+      car2 = new GeneralCar("Maruti Alto", 80);
+      car3 = new GeneralCar("Mercedes", 200);
+      // console.log(car1,car2,car3);
+
+      // Object Literal : It inherits from Object.prototype
+      let obj = {
+        name: "Harry",
+        aim: "Programming",
+        address: "Mars",
+      };
+      // console.log(obj);
+      // Object Constructor : It inherits from Obj.prototype
+      function Obj(givenName) {
+        this.name = givenName;
+      }
+      Obj.prototype.getName = function () {
+        return this.name;
+      };
+      Obj.prototype.setName = function (newName) {
+        this.name = newName;
+      };
+      let obj2 = new Obj("Pratham");
+      // console.log(obj2);
+      // console.log(obj2.toString());
+      //This is blunder, heavy mistake !!! Do not try this at home !!!!!!!!!
+      // Object.prototype.getName=function(){
+      //     return this.name;
+      // }
+      obj2.setName("Agarwal");
+      // console.log(obj2);
+
+      //Prototype-Inheritance
+
+      const proto = {
+        slogan: function () {
+          return `This company is the best`;
+        },
+        changeName: function (newName) {
+          this.name = newName;
+        },
+      };
+
+      //   This creates pratham object (Method-1)
+      const pratham = Object.create(proto);
+      pratham.name = "Pratham";
+      pratham.role = "Programmer";
+      //  To change the name
+      //   pratham.changeName("Agarwal");
+      //   console.log(pratham);
+
+      //   This creates pratham2 object (Method-2)
+      const pratham2 = Object.create(proto, {
+        //   writable:true gives the writes permission to it
+        name: { value: "Pratham2", writable: true },
+        role: { value: "Programmer2" },
+      });
+      pratham2.changeName("Agarwal");
+      //   console.log(pratham2);
+
+      //   Constructing Employee constuctor
+
+      function Employee(name, salary, experience) {
+        this.name = name;
+        this.salary = salary;
+        this.experience = experience;
+      }
+
+      //   Adding Slogan to prototype of Employee
+      Employee.prototype.slogan = function () {
+        return `This company is the best. Regards, ${this.name}`;
+      };
+
+      // Now Creating the Object for Constructor Employee
+      let prathamObj = new Employee("Pratham", 10000000, 10);
+      console.log(prathamObj);
+      //   To print the slogan with name
+      console.log(prathamObj.slogan());
+
+      // Creating Another Constructor Programmer
+      //   Inherit the name,salary & experience from Employee constructor
+      function Programmer(name, salary, experience, language) {
+        Employee.call(this, name, salary, experience);
+        this.language = language;
+      }
+      // Inherit the prototype of Employee Constructor
+      Programmer.prototype = Object.create(Employee.prototype);
+
+      // Manually setting the constructor to Programmer as it was inherited from Employee
+      Programmer.prototype.constructor = Programmer;
+
+      let Babu = new Programmer("Babu", 1000000, 15, "JavaScript");
+      console.log(Babu);
+
+      function Food(flour, fruits) {
+        this.flour = flour;
+        this.fruits = fruits;
+        // this.grocery = grocery; 
+      }
+      function Cake(flour,fruits,flavour,size){
+          Food.call(this,flour,fruits);
+          this.flavour=flavour;
+          this.size=size;
+      }
+      let cake1 = new Cake("Maida","Mango","Chocolate",3);
+      console.log(cake1);
+    </script>
+  </body>
+</html>

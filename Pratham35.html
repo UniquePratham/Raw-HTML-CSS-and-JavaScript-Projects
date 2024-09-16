@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial | Strings and String Method</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <div id="content"></div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus est consequatur suscipit, laudantium doloremque quasi illo itaque quaerat, quos aliquid labore officiis. Saepe qui error optio ab veniam totam, quos libero sint minus. Libero?
+        </p>
+    </div>
+    <script>
+        // You can double quotes ("") and single quotes ('') both to make sting variable
+        // var string="This";
+        // var string='This';
+
+        // If you want to use double quotes("") in your string; then you should use single quotes('') 
+        // var string=' Hello "Pratham" Hello '
+
+        // If you want to use single quotes('') in your string; then you should use double quotes("") 
+        // var string= "Hello 'Pratham' Hello";
+
+        // If you want to use single quotes('') & double quotes("") both in your string; then you should use backticks symbol (``) (Down to ESCAPE , Up to TAB & Left to 1)
+        // var string= `Hello 'Pratham' "Agarwal" Hello`;
+        // console.log(string);
+
+        var name='Pratham';
+        var message=' is a very good boy'
+        var aim=' and wants to become a hacker'
+        // If you want to write it together , method -1
+        // console.log(name+message+aim);
+
+        // If you want to write it together but adding text in the middle then you should use backticks symbol (``) (Down to ESCAPE , Up to TAB & Left to 1)  , method -2
+        // var temp=`${name} is a nice person and he${message}${aim}`;
+        var temp=`${name} is a 'nice' "person" and he${message}${aim}`;
+        // console.log(temp);
+        
+        // If you want to take out the length of any string; then use string.length;
+        var ram=name.length;
+        // console.log(ram);
+        // console.log(`Length of ${name} is ${ram}`);
+
+        // \n means new line 
+        // console.log('Hello World ! \n Pratham');
+
+        // console.log('Hello World ! \b Pratham');
+        // console.log('Hello World ! \t Pratham');
+        // console.log('Hello World ! \\n Pratham');
+
+        // Basic String Constructor 
+        var x=new String("This is a new ")
+        var y=new String("String constructed by constuctor ")
+        console.log(x);
+        console.log(y);
+        document.getElementById('content').innerHTML='<h3>This is an h3 heading</h3>'
+    </script>
+</body>
+</html>

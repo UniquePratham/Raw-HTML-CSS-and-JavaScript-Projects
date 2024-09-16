@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial - Introduction, Variables & Operators </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>This is a heading</h1>
+        <!-- <div class="row">
+            <p>This is a row in this container</p>
+        </div> -->
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quaerat quisquam consequuntur nam?
+                Assumenda earum quam dolorem corrupti consectetur autem nihil sed beatae modi saepe quod quasi, ut,
+                ratione officiis iure quo vero illo enim, reiciendis obcaecati mollitia? Unde in ad officiis. Voluptatum
+                architecto natus perferendis blanditiis tempora maiores maxime molestias aperiam eum quisquam?
+                Recusandae sed dicta, minus natus nobis explicabo sequi labore a dolor non quas!</p>
+        </div>
+    </div>
+    <script>
+        // Write your js here 
+        // console.log('Hello World')
+
+        // Variables in JavaScript
+        var a = 78;
+        // console.log(a);
+        var b = "Pratham";
+        // console.log(b);
+        var c = 34.55;
+        // console.log(c);
+        // Operators in JavaScript
+        // In 3 + 4 '+' is the operator and 3,4 are operands 
+        // Operand - entities on which operators operate
+
+        // 1. unary operator - It has single operand (x = -x)
+        // Examples of unary operator
+        var d = 9;
+        d = -d;
+        // console.log(d);
+
+        // 2. binary operator - It has two operands (x = a +|-|*|/ b )
+        // Examples of unary operator
+        var num1 = 2;
+        var num2 = 3;
+        var num3 = num1 + num2;
+        // console.log(num3);
+
+        // Arithmetic Operators in action in JavaScript
+        var num4 = 8;
+        var num5 = 4;
+        // To add 
+        console.log("The value of " + num4 + " + " + num5 + " is " + (num4 + num5));
+        // To substract
+        console.log("The value of " + num4 + " - " + num5 + " is " + (num4 - num5));
+        // To multiply
+        console.log("The value of " + num4 + " * " + num5 + " is " + (num4 * num5));
+        // To divide
+        console.log("The value of " + num4 + " / " + num5 + " is " + (num4 / num5));
+        // To the power of 
+        console.log("The value of " + num4 + " ^ " + num5 + " is " + (num4 ** num5));
+        // It  will first  print the num4 i.e 8 and then increase the value of num4 by 1 i.e 9
+        console.log("The value of " + num4 + " ++ " + " is " + (num4++));
+        // It  will first increase the value of num4 by 1 i.e 10 and then print the num4 i.e 10
+        console.log("The value of " + num4 + " ++ " + " is " + (++num4));
+        // It  will first  print the num4 i.e 10 and then decrease the value of num4 by 1 i.e 9
+        console.log("The value of " + num4 + " -- " + " is " + (num4--));
+        // It  will first decrease the value of num4 by 1 i.e 8 and then print the num4 i.e 8
+        console.log("The value of " + num4 + " -- " + " is " + (--num4));
+
+        // Creating table using console.table
+        console.table({ pratham: 'agarwal', number: 1 });
+
+        // Creating warning using console.warn
+        console.warn('This is a warning!!!');
+
+        // Clearing the console using console.clear()
+        // console.clear();
+
+        // To calculate the time taken to run & execute the program 
+        // At the first of your code; place this line
+        // console.time('Your Code Took ');
+        // At the last of your code; place this line
+        // console.timeEnd('Your Code Took ');
+
+        // To check the condition for running the Script i.e if the condition is true then only my Script works & not other than else
+        console.assert(566 < 189, "Age > 189 is not possible ");
+
+        // To manually run an error or to show an error during if-else statement; then
+        console.error('This is an error');
+
+        // Rules for creating JavaScript Variables
+        // 1. Cannot Start with numbers
+        // 2. Can start with letter , numbers , _ , or $
+        // 3. Are Case-Sensitive
+
+        // Most Common Programming Case Types:
+        // 1. camelCase
+        // 2. kebab-case
+        // 3. snake_case
+        // 4. PascalCase
+
+        // typeof operator is used to find the type of the given data
+
+        // To make any data-type to string; we can use 
+        // string function - let variable=String(any-data-type);
+        // toSting function - console.log(any-data-type.toString());
+
+        // To make any data-type to number; we can use 
+        // number function - let variable=Number(any-data-type); it gives integer along with after decimal numbers
+
+        // To make any data-type to round-off & make integer; we can use
+        // parseInt function - let variable=parseInt(any-data-type); it rounds the number to the nearest integer
+
+        // To make any data-type to exact numberl we can use
+        // parseFloat function - let variable=parseFloat(any-data-type); it gives integer along with after decimal numbers
+
+        // To make fixed number of decimal points after a number
+        let number = 34.098
+        console.log(number.toFixed(2), (typeof number));
+
+        // Assignment Operators
+        var a = 3;
+        var b = 4;
+        var c = b;
+        c += 2; // c=c+2;
+        c -= 2; // c=c-2;
+        c *= 2; // c=c*2;
+        c /= 2; // c=c/2;
+        // console.log(c);
+
+        // Comparison Operators
+        var x = 34;
+        var y = 56;
+        // console.log(x == y);
+        // console.log(x >= y);
+        // console.log(x <= y);
+        // console.log(x > y);
+        // console.log(x < y);
+
+        // Logical Operators
+
+        // 1. Logical AND
+        // console.log(true && true);
+        // console.log(true && false);
+        // console.log(false && true);
+        // console.log(false && false);
+
+        // 2. Logical OR
+        // console.log(true || true);
+        // console.log(true || false);
+        // console.log(false || true);
+        // console.log(false || false);
+
+        // 3. Logical NOT
+        // console.log(!false); // Makes false statement true
+        // console.log(!true);  // Makes true statement false
+
+        // Single | is Bit-Wise Operator: Not Important; Google For More
+    </script>
+</body>
+
+</html>

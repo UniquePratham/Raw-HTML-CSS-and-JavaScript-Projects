@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>This is HTML Forms Tutorial</h2>
+    <!-- Forms -->
+    <form action="backend.php">
+    <br>
+    <div>
+        <label for="Name"> Name: </label><input type="text" name="Myname" id="Name" placeholder="Enter Your Name">
+    </div>
+    <br>
+    <div>
+        <label for="Roll N.o"> Roll N.o: </label><input type="number" name="Myrolln.o" id="Roll N.o" placeholder="Enter Your Roll N.o ">
+    </div>
+    <br>
+    <div>
+        <label for="Role"> Role: </label><input type="text" name="Myrole" id="Role" placeholder="Enter Your Role ">
+    </div>
+    <br>
+    <div>
+        <label for="Email"> E-mail: <input type="email" name="Myemail" id="Email" placeholder="Enter Your E-mail "></label>
+    </div>
+    <br>
+    <div>
+        <label for="D.O.B"> Date of Birth: <input type="date" name="Mydob" id="D.O.B"></label>
+    </div>
+    <br>
+    <div>
+        <label for="Eligibility"> Are you eligible?: <input type="checkbox" name="Myeligibility" id="Eligibility"></label>
+    </div>
+    <br>
+    <div>
+        <label for="Partner"> You are our Partner!- <input type="checkbox" name="Mypartner" id="Partner" checked></label>
+        <!-- checked is used to default check an checkbox item -->
+    </div>
+    <br>
+    <div>
+        <label for="GenderMale"> Gender: Male <input type="radio" name="Mygender" id="GenderMale"></label><label for="GenderFemale"> Female: <input type="radio" name="Mygender" id="GenderFemale"></label><label for="GenderOther"> Other: <input type="radio" name="Mygender" id="GenderOther"></label>
+    </div>
+    <br>
+    <div>
+        <label for="Selectyourcar"> Select your car: <select name="Mycar" id="Selectyourcar">
+            <option value="Audi">Audi</option><option value="Ferrari">Ferrari</option><option value="Mercedes">Mercedes</option><option value="BMW" selected>BMW</option></select></label>
+            <!-- selected is used to default select and item from the select and option tag  -->
+    </div>
+    <br>
+    <div>
+        <label for="Writeaboutyourself"> Write about Yourself: <br><textarea name="Myabout" id="Writeaboutyourself" cols="30" rows="10" placeholder="Enter About Yourself"></textarea></label>
+    </div>
+    <br>
+    <div>
+        <input type="submit" value="Submit Now"><input type="reset" value="Reset Now">
+    </div>    
+    </form>
+</body>
+</html>

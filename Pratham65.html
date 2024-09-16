@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps In JavaScript Tutorial</title>
+</head>
+
+<body>
+    <script>
+        console.log('This is Maps Tutorial in JavaScript');
+        // Maps in JavaScript
+        // We can use any type of key or value 
+
+        // Assigning a empty Map
+        const myMap = new Map();
+        // console.log(myMap);
+
+        // Assigning keys
+        const key1 = 'myStr', key2 = {}, key3 = function () { };
+
+        // Setting Map Values
+        myMap.set(key1, 'This is a string');
+        myMap.set(key2, 'This is a blank object');
+        myMap.set(key3, 'This is an empty function');
+        // console.log(myMap);
+
+        // Getting the values from a Map
+        let value1 = myMap.get(key1);
+        let value2 = myMap.get(key2);
+        let value3 = myMap.get(key3);
+        // console.log(value1, value2, value3);
+
+        // Get the size of the Map
+        // console.log(myMap.size);
+
+        // You can loop a Map using For...Of to get keys and values
+        for (let [key, value] of myMap) {
+            // console.log(key, value);
+        }
+
+        // Get only keys
+        for (let key of myMap.keys()) {
+            // console.log(key);
+        }
+
+        // Get only values
+        for (let value of myMap.values()) {
+            // console.log(value);
+        }
+
+        // You can loop a Map using For...Each to get keys and values
+        myMap.forEach((value, key) => {
+            // console.log('key is ', key);
+            // console.log('value is ', value);
+        });
+
+        // Converting a Map to an Array
+        let myArray = Array.from(myMap);
+        console.log('Map to Array is ', myArray);
+
+        // Converting a Map Keys to an Array
+        let myKeysArray = Array.from(myMap.keys());
+        console.log('Map to KeysArray is ', myKeysArray);
+        
+        // Converting a Map Values to an Array
+        let myValuesArray = Array.from(myMap.values());
+        console.log('Map to ValuesArray is ', myValuesArray);
+    </script>
+</body>
+
+</html>

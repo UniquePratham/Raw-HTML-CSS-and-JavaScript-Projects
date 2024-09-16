@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <style>
+        .navbar {
+            background-color: orange;
+            border-radius: 50px;
+
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 25px 15px;
+
+
+        }
+
+        .navbar li a {
+            padding: 5px 5px;
+            text-decoration: none;
+            color: green;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .navbar li a:hover {
+            padding: 5px 5px;
+            font-weight: bold;
+            text-decoration: none;
+            color: darkgreen;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .search {
+            float: right;
+            color: aliceblue;
+            padding: 10px 100px;
+            margin: 16px 16px;
+        }
+        .navbar input{
+            border: 1px solid orangered;
+            border-radius: 10px;
+            text-align: center;
+            padding: 5px 10px;
+
+        }
+        .btn{
+            height: 28px;
+            width: 28px;
+            border-radius: 8px;
+            background-color: orange;
+        }
+        .btn:hover{
+            background-color: white;
+            cursor: pointer;
+            border: 2px solid orangered;
+            color: orange;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#"> Home</a></li>
+                <li><a href="#"> About</a></li>
+                <li><a href="#"> Services</a></li>
+                <li><a href="#"> Contact Us</a></li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search This Website">
+                    <button class="btn"><i class="fa fa-search"></i></button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+<script src="https://kit.fontawesome.com/1a00293417.js" crossorigin="anonymous"></script>
+
+</html>

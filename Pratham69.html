@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop Elements with JavaScript</title>
+    <style>
+        body {
+            background: brown;
+        }
+
+        .imgBox {
+            background-image: url('Agarwal.jpg');
+            position: relative;
+            height: 145px;
+            width: 145px;
+            margin: auto;
+            margin-top: 6px;
+            cursor: pointer;
+        }
+
+        .whiteBox {
+            height: 155px;
+            width: 155px;
+            border: 7px solid green;
+            background: skyblue;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .hold {
+            border: 4px solid salmon;
+        }
+
+        .dashed {
+            background: green;
+            border-style: dashed;
+            border-color: skyblue;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whiteBox">
+        <div class="imgBox" draggable="true"></div>
+    </div>
+    <div class="whiteBox"></div>
+    <div class="whiteBox"></div>
+    <div class="whiteBox"></div>
+    <script>
+        console.log('This is Drag & Drop Elements with JavaScript');
+        const imgBox = document.querySelector('.imgBox');
+        const whiteBoxes = document.getElementsByClassName('whiteBox');
+        // Event Listeners for draggable element imgBox
+        imgBox.addEventListener('dragstart', (e) => {
+            console.log('DragStart has been triggered');
+            e.target.className += ' hold';
+            setTimeout(() => {
+                e.target.className = ' hide';
+            }, 0);
+        })
+        imgBox.addEventListener('dragend', (e) => {
+            e.target.className = 'imgBox';
+            console.log('DragEnd has been triggered');
+        })
+        for (whiteBox of whiteBoxes) {
+            whiteBox.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                console.log('DragOver has been triggered');
+            });
+            whiteBox.addEventListener('dragenter', (e) => {
+                e.target.className += ' dashed';
+                console.log('DragEnter has been triggered');
+            });
+            whiteBox.addEventListener('dragleave', (e) => {
+                e.target.className = 'whiteBox';
+                console.log('DragLeave has been triggered');
+            });
+            whiteBox.addEventListener('drop', (e) => {
+                console.log('Drop has been triggered');
+                e.target.className = 'whiteBox';
+                e.target.append(imgBox);
+            });
+        }
+        
+    </script>
+</body>
+
+</html>

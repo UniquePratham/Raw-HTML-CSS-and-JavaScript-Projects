@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        h1 {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Any div tag containing p tag in it will use this CSS */
+        /* div p{
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+
+        } */
+
+        /* Any div tag containing li tag in it ; continously ; li tag containing p tag in it will use this CSS (Blockage of any other tag is not affected in this if there is any in the middle i.e. these tags to be serially is not a necessity)*/
+        /* div li p{
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+
+        } */
+
+        /* Any div tag containing p tag in it ; continously ; p tag containing li tag in it will use this CSS (Blockage of any other tag is not affected in this if there is any in the middle i.e. these tags to be serially is not a necessity)*/
+        /* div p li{
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+
+        } */
+
+        /* The definite div tag which directly connects p tag inside it i.e p tag just rightinside it will use this CSS (Blockage of any other tag is affected in this i.e. these tags are required to be serially as ordered and it is necessity) */
+        /* div>p{
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+
+        } */
+
+        /* If Any p tag is just rightafter the closing tag of div then this CSS will be applied */
+        /* We can say that p must be the next or justafter tag/sibling of the div i.e closing div tag */
+        /* div+p{
+            color: yellow;
+            font-weight: bold;
+            background-color: green;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item">
+                    <p>This is another paragraph inside li</p>
+                </li>
+                <li>This will not get affected</li>
+            </ul>
+            <p>This is a paragraph</p>
+        </div>
+        <p>This is another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: rgb(192, 155, 155);
+        }
+
+        .container {
+            width: 900px;
+            border: 3px solid purple;
+            /* If you want to center any item or body then use margin:auto; */
+            margin: 33px auto;
+            /* 33 px is used for y-axis if needed */
+
+        }
+
+        .item {
+            border: 3px solid grey;
+            margin: 12px 3px;
+            padding: 12px 3px;
+            background-color: rgb(248, 238, 238);
+        }
+
+        #fruit {
+            float: left;
+            width: 48%;
+
+        }
+
+        #computer {
+            float: left;
+            width: 48%;
+        }
+
+        #stationary {
+            /* float: left; */
+            clear: both;
+            /* clear: both; is used to clear the overlapping of float function for it  */
+            width: 98%;
+        }
+
+        p,
+        h3 {
+            /* text-align: right;
+            text-align: left;
+            text-align: center; */
+            text-align: justify;
+        }
+
+        h1 {
+            margin: auto;
+            width: 350px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to my Store</h1>
+    </div>
+    <div class="container">
+        <div id="fruit" class="item">
+            <h3>Fruit</h3>
+            <p id="fruitpara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos cumque
+                expedita cupiditate vel facilis eos quisquam voluptatibus tempore cum voluptatem quas, eius, ullam vero,
+                nihil harum quam laboriosam! Architecto, fugit Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Tempore quaerat tenetur aut enim cumque eius in? Ab voluptas amet facere ipsum autem quod enim obcaecati
+                dicta, beatae modi voluptatibus id? Beatae tempore numquam tenetur?</p>
+        </div>
+        <div id="computer" class="item">
+            <h3>Computer</h3>
+            <p id="computerpara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos cumque
+                expedita cupiditate vel facilis eos quisquam voluptatibus tempore cum voluptatem quas, eius, ullam vero,
+                nihil harum quam laboriosam! Architecto, fugit Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Sit itaque natus quis? Repellendus doloribus eos consequatur labore mollitia eligendi eveniet impedit
+                amet iusto perspiciatis tenetur totam adipisci, magni vero ea facilis. Debitis, repudiandae repellat.
+            </p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>Stationary</h3>
+            <p id="stationarypara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos cumque
+                expedita cupiditate vel facilis eos quisquam voluptatibus tempore cum voluptatem quas, eius, ullam vero,
+                nihil harum quam laboriosam! Architecto, fugit.</p>
+        </div>
+        <div id="glasses" class="item">
+            <h3>Glasses</h3>
+            <p id="glassespara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos cumque
+                expedita cupiditate vel facilis eos quisquam voluptatibus tempore cum voluptatem quas, eius, ullam vero,
+                nihil harum quam laboriosam! Architecto, fugit.</p>
+        </div>
+    </div>
+</body>
+
+</html>

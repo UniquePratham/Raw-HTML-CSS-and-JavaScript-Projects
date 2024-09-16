@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise-4</title>
+</head>
+
+<body>
+    <div class="container">This is a container</div>
+    <script>
+        console.log("This is a Library");
+        // Constructor
+        function Library(bookList) {
+            this.issuedBooks = {};
+            this.bookList = bookList;
+
+        }
+        Library.prototype.getBookList = function () {
+            let i = 0
+            while (i < this.bookList.length) {
+                console.log(`Book ${i + 1} is ${this.bookList[i]} `);
+                i++;
+            }
+            console.log("Are The Books");
+        }
+        Library.prototype.getissuedBookList = function (bookName) {
+            if (this.issuedBooks != {}) {
+                console.log(this.issuedBooks);
+                console.log(`${bookName} has been issued to ${this.issuedBooks[bookName]}`);
+            }
+        }
+        Library.prototype.addBook = function (bookName) {
+            this.bookList.push(bookName);
+            return `Your Book ${bookName} is successfully added to the Library!`;
+        }
+        Library.prototype.issueBook = function (bookName, uSer) {
+            let i = 0;
+            let val = 0;
+            while (i < this.bookList.length) {
+                if (bookName == this.bookList[i]) {
+                    val = 1;
+                    if (this.issuedBooks[bookName] == undefined) {
+                        this.issuedBooks[bookName] = uSer;
+                        console.log(`Book Named ${bookName} is issued to ${uSer}`);
+                        break;
+                    }
+                    else {
+                        console.log(`${uSer} ! Book Named ${bookName} has already been issued !`);
+                    }
+                }
+                i++;
+            }
+            if (val == 0) {
+                console.log(`BooK-Name cannot be found to be issue!`);
+            }
+        }
+        Library.prototype.returnBook = function (bookName, uSer) {
+            let i = 0;
+            let val = 0;
+            while (i < this.bookList.length) {
+                if (bookName == this.bookList[i]) {
+                    val = 1;
+                    if (uSer == this.issuedBooks[bookName]) {
+                        delete this.issuedBooks[bookName];
+                        console.log(`Book Named ${bookName} was returned back to Library`);
+                        break;
+                    }
+                    else {
+                        console.log(`BooK Named ${bookName} cannot be found any issued to be return!`);
+                    }
+                }
+                i++;
+            }
+            if (val == 0) {
+                console.log(`BooK Named ${bookName} cannot be found to be return!`);
+            }
+            return `Return Your Book`;
+        }
+        let lib = new Library([
+            "Rings",
+            "Hobbit",
+            "Nostradamos",
+            "Away",
+            "Autumn",
+            "BattleBorn",
+            "BeLoved",
+        ]);
+        console.log(lib);
+        console.log(lib.getBookList());
+        console.log(lib.addBook("Mahabharat"));
+        console.log(lib.getBookList());
+        console.log(lib.issueBook("Away", "Pratham"));
+        console.log(lib.getissuedBookList("Away"));
+        console.log(lib);
+        console.log(lib.issueBook("Away", "Harry"));
+        console.log(lib.returnBook("Away", "Pratham"));
+        console.log(lib.getBookList());
+    </script>
+</body>
+
+</html>

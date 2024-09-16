@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial | String Functions</title>
+</head>
+
+<body>
+    <script>
+        var str = "This is a String";
+        console.log(str);
+
+        // Indexing starts from 0 
+        // It is case-sensitive
+        // First Occurence of a substring
+        var position = str.indexOf('Th');
+        // console.log(position);
+
+        // Last Occurence of a substring
+        position = str.lastIndexOf('is');
+        // console.log(position);
+
+        // Substring from a string
+
+        // 1. variable.slice(starting index value of string , 1 greater than ending index value of string (Length of substring you need from the string +1))
+
+        // For example if we want "his is" from variable str then we should use 1 (starting from 0 )(starting value of index ) , 7 (as our ending index value of s is 6 but we have to add +1 to it in slice)
+        var substtr = str.slice(1, 7);
+        // console.log(substtr);
+
+        // 2. variable.substring(starting index value of string , 1 greater than ending index value of string (Length of substring you need from the string +1) )
+
+        // For example if we want "his is" from variable str then we should use 1 (starting from 0 )(starting value of index ) , 7 (as our ending index value of s is 6 but we have to add +1 to it in substring)
+
+        // The only difference between slice and substring is slice can accept negative values but substring can't 
+        var substtr = str.substring(1, 7);
+        // console.log(substtr);
+
+        // 3. variable.substr(starting index value of string , ending index value of string (Length of substring you need from the string ))
+
+        // For example if we want "his is" from variable str then we should use 1 (starting from 0 )(starting value of index ) , 6 (as our ending index value of s is 6 in substr)
+        var substtr = str.substr(1, 6);
+        // console.log(substtr);
+
+        // If you want to replace string  from str then use replace function
+        var replaced = str.replace('string', 'Pratham');
+        // console.log(replaced);
+
+        // If you want to print str in Uppercase or Lowercase then use toUpperCase/toLowerCase
+        // console.log(str.toUpperCase());
+        // console.log(str.toLowerCase());
+
+        // If you want to add some string in str then used concat function (concatenation)
+        var newString = str.concat(' & This is a New String');
+        // console.log(newString);
+
+        // To remove extra white spaces from beginning & end i.e it removes white spaces from both side of string; we us trim function 
+        var strwithWhitespaces = "      This contains           whitespaces      ";
+        // console.log(strwithWhitespaces);
+        // console.log(strwithWhitespaces.trim());
+
+        // It  will extract  and print the character from the string of the desired index value
+        var character=str.charAt(2);
+        // console.log(character);
+
+        // ASCII CODE can be extracted by
+        var character2=str.charCodeAt(2); // Not very important 
+        // console.log(character2);
+
+        // We can slice the string by 
+        console.log(str[3]);
+
+        // To check whether following ends with "------" or not 
+        // use endsWith
+
+        // To check whther following includes "------" or not
+        // use includes
+
+        // To make each elements before space a new element and get it in a array for the following
+        // use split 
+    </script>
+</body>
+
+</html>

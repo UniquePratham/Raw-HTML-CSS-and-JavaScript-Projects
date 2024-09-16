@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>This is a Quiz</h1>
+      <ul class="nav">
+        <li class="item">Home</li>
+        <li class="item">About</li>
+        <li class="item">Services</li>
+        <li class="item">Contact Us</li>
+      </ul>
+    </div>
+    <script>
+      console.log("Quiz");
+      let link = document.createElement("a");
+      link.setAttribute("href", "https://www.codewithharry.com");
+      link.className = "linking";
+      link.id = "linked";
+      let element = document.createElement("h1");
+      element.className = "heading";
+      element.id = "head";
+      element.innerHTML = "<b>Go to CodeWithHarry</b>";
+      let cont = document.querySelector("div.container");
+      cont.appendChild(link);
+      let links=document.querySelector("a.linking");
+      links.appendChild(element);
+      //   console.log(cont);
+      //   console.log(element);
+    </script>
+  </body>
+</html>

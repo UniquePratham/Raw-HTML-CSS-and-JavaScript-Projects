@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Sets Tutorial</title>
+</head>
+
+<body>
+    <script>
+        console.log('JavaScript Sets Tutorial');
+        // Set stores Unique Values
+
+        // Initialize an empty Set
+        const mySet = new Set();
+        console.log('The set looks like this: ', mySet);
+
+        // Adding values to this Set
+        mySet.add('this');
+        mySet.add('My name');
+        mySet.add('this'); // This will not be repeat as it is duplicate as it has it before 
+        mySet.add('that');
+        mySet.add(34);
+        mySet.add(true);
+        mySet.add(false);
+        mySet.add(undefined);
+        mySet.add('that2');
+        console.log('The set looks like this now: ', mySet);
+
+        // Initializing a Set & adding values to it using Constructor
+        let mySet2 = new Set([1, 45, 'this', false, { a: 4, b: 8 }, 'this']);
+        console.log('The new set looks like this: ', mySet2);
+
+        // Get the size of the Set
+        console.log(mySet.size);
+
+        // has Function whether following is contained by Set or not; if it has then return true else return false
+        console.log(mySet.has(34));
+        console.log(mySet.has(346));
+
+        // delete Function deletes the following value from the Set
+        // console.log('Before Removal', mySet);
+        // mySet.delete('My name');
+        // console.log('After Removal', mySet);
+        console.log('Before Removal', mySet.has('My name'));
+        mySet.delete('My name'); // Remove an element from the Set
+        console.log('After Removal', mySet.has('My name'));
+
+        // Iterating a Set
+        for (let item of mySet) {
+            // console.log('Item is:', item);
+        }
+        mySet.forEach((item) => {
+            console.log('Item is:', item);
+        })
+
+        // Quiz 
+        // Removing Duplicates from an Array
+        let myArray = [1, 'one', 2, 'two', 3, 'three', 1, 'four', 5, 'two', 3, 'three'];
+        let mySet3 = new Set(myArray);
+        let myNewArray = Array.from(mySet3);
+        console.log('Array having Duplicate : ', myArray);
+        console.log('Making Set out of an Array : ', mySet3);
+        console.log('New Array Removing Duplicate : ', myNewArray);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Functions</title>
+</head>
+
+<body>
+    <div class="container">
+        This is a container
+    </div>
+    <h1>Students List</h1>
+    <ul id="students"></ul>
+    <script>
+        console.log("This is Callback Functions Tutorial");
+
+        // Pretend that this response is coming from the server
+        const students = [
+            { name: "Pratham", subject: "JavaScript" },
+            { name: "Adarsh", subject: "Machine Learning" }
+        ];
+
+        // In students.forEach() -e.g, it itsef is a function as well as takes a takes to operate is called CallBack Function
+        // function FunctionName(FunctionElement,Name of the function to callback)
+        function enrollStudent(student, callback) {
+            // Again setTimeout(function){} is also a callback function whose itself is function & taking function itself to operate
+            // setTimeout function runs the work in background i.e asynchronously without blocking after timegiven
+            // setTimeout is used because whenever you will add data to your server; you will send a request to your server & server will take time to response & that time is timegiven to setTimeout to run the code asynchronously after timegiven; 
+            setTimeout(function () {
+                students.push(student);
+                console.log("Student have been enrolled");
+                callback();
+            }, 1000);
+        }
+        function getStudents() {
+            setTimeout(function () {
+                let str = "";
+                // <li>${student.subject} </li>
+                students.forEach(function (student) {
+                    str += `<li>${student.name} </li>
+                    `;
+                })
+                document.getElementById("students").innerHTML = str;
+                console.log("Students have been fetched");
+            }, 5000);
+        }
+
+        let newStudent = { name: "Kunal", subject: "Python" };
+        enrollStudent(newStudent, getStudents);
+        // getStudents();
+    </script>
+</body>
+
+</html>

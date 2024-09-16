@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript | JSON Tutorial, Local Storage, Session Storage</title>
+  </head>
+
+  <body>
+    <div class="container">This is a container</div>
+    <script>
+      // JSON - JavaScript Object Notation
+      let jsonObj = {
+        name: "Pratham",
+        aim: "Programming",
+        friend: "Adarsh",
+        food: "Bhindi",
+      };
+      // console.log(jsonObj);
+
+      // JSON.stringify is used to convert object into JSON string
+      let myJsonStr = JSON.stringify(jsonObj);
+      // console.log(myJsonStr);
+
+      // You can replace data after making string
+      myJsonStr = myJsonStr.replace("Programming", "Hacking");
+      // console.log(myJsonStr);
+
+      //JSON.parse is used to convert JSON string to object again
+      newjsonObj = JSON.parse(myJsonStr);
+      // console.log(newjsonObj);
+
+      //JSON.parse("not a json"); This will give an error
+
+      //   function average(arr) {
+      //     let sum = 0;
+      //     arr.forEach((element) => {
+      //       sum += element;
+      //     });
+      //     return sum / arr.length;
+      //   }
+      // function factorial(num) {
+      //     let fac = 1;
+      //     // while (num!=0) {
+      //     //     // if (num != 0) {
+      //     //         fac *= num;
+      //     //         num--;
+      //     //     // }
+      //     //     // else {
+      //     //     //     break;
+      //     //     // }
+      //     // }
+      //     i = 0;
+      //     fac = 1
+      //     for (i = 0; i <= num+1; i++) {
+      //         if (num != 0) {
+      //             fac *= num;
+      //             num--;
+      //         }
+      //         else {
+      //             break;
+      //         }
+      //     }
+      //     return fac;
+      // }
+
+      // let av = average([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+      // console.log(av);
+      // let fact = factorial(7);
+      // console.log(fact);
+
+      //   localStorage- it doesnot clear itself until it is told to do so even if closing & reopening website in a browser while commenting setItem commands
+      //   sessionStorage- it is same as local storage (used all properties & attributes same as local storage) but clears itself when session is closed or browser-window is closed
+
+      //   Add a key-value pair inside local Storage
+      //   localStorage.setItem("Name", "Pratham");
+      //   localStorage.setItem("Name2", "Agarwal");
+      //   // window.localStorage
+      //   // typeof window.localStorage
+      //   // typeof window.localStorage.Name
+
+      //   Retrieve an item from the local Storage
+      //   // U can try & retrieve data from localStorage
+      //   // window.localStorage.Name
+      //   // window.localStorage.Name2
+      //   let name = localStorage.getItem("Name");
+      //   let name2 = localStorage.getItem("Name2");
+      //   console.log(name + " " + name2);
+
+      //   Clears the entire local Storage
+      //   localStorage.clear();
+
+      //   To clear a particular key-value pair
+      //   localStorage.removeItem('Name2');
+
+      //   let impArray = ["adrak", "pyaz", "bhindi"];
+      //   //   If we will store array like this then it will save array in string
+      //   //   localStorage.setItem('Sabzi',impArray);
+      //   localStorage.setItem("Sabzi", JSON.stringify(impArray));
+      //   //   If we directly retrieve like this then it will show array as a string
+      //   //   let sabzi = localStorage.getItem("Sabzi");
+      //     let sabzi = JSON.parse(localStorage.getItem('Sabzi'));
+      //   console.log(sabzi);
+    </script>
+  </body>
+</html>

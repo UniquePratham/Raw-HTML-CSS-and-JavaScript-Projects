@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=PT+Sans&family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.background {
+  background: rgba(0, 0, 0, 0.6) url(../Img/bg.jpg);
+  background-size: cover;
+  background-blend-mode: darken;
+}
+.background2 {
+  background: rgba(0, 0, 0, 0.6) url(../Img/bg2.jpg);
+  background-size: cover;
+  background-blend-mode: darken;
+}
+.navBar {
+  display: flex;
+  border-bottom: 2px solid black;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0%;
+}
+.leftNav {
+  width: 70%;
+}
+.navList {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17%;
+}
+.logo img {
+  width: 50%;
+  mix-blend-mode: multiply;
+  margin: 5px 0;
+}
+.navList li {
+  list-style: none;
+  padding: 20px;
+}
+.navList li a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 1px black;
+  font-size: 1.1rem;
+  font-family: "Lobster", cursive;
+}
+.navList li a:hover {
+  color: black;
+  text-shadow: 1px 1px white;
+  transform: scale(1.1);
+}
+
+.rightNav {
+  width: 30%;
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+#searchBox {
+  padding: 7px;
+  margin: 5px;
+  font-family: "PT Sans", sans-serif;
+  border: 2px solid black;
+  outline: none;
+  border-radius: 10px;
+  width: 50%;
+}
+#searchBox::placeholder {
+  text-align: center;
+  color: gray;
+}
+
+.btn {
+  background-color: black;
+  border: 2px solid grey;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 1px 1px grey;
+  font-family: "PT Sans", sans-serif;
+  padding: 8px 10px;
+  cursor: pointer;
+  outline: none;
+}
+#searchBtn:hover {
+  background-color: grey;
+  border: 2px solid black;
+  color: black;
+  opacity: 0.4;
+  font-weight: bold;
+}
+.firstSection {
+  height: 100vh;
+}
+.mainBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 1px black;
+  height: 100%;
+}
+.firstHalf {
+  width: 70%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  padding: 100px 0;
+  padding-left: 100px;
+  font-family: "PT Sans", sans-serif;
+  text-align: justify;
+}
+.textBig {
+  font-size: 2rem;
+  font-weight: bold;
+  color: grey;
+}
+.textMedium {
+  font-size: 1.5rem;
+  font-family: "Lobster", cursive;
+}
+.textSmall {
+  font-size: 1rem;
+}
+.space {
+  margin: 3px;
+}
+.buttons {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+}
+.secondHalf {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secondHalf img {
+  width: 50%;
+  height: 50%;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+.btnBig {
+  width: 35%;
+  height: 65px;
+  font-size: 1rem;
+  margin: 0 3px;
+}
+.btnBig:hover {
+  background: white;
+  border: 2px solid black;
+  color: black;
+  text-shadow: 1px 1px grey;
+}
+.secondSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutHeading {
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  font-size: 3rem;
+  color: gray;
+  text-shadow: 2px 1px black;
+  text-decoration: underline;
+}
+.containerRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  margin: 20px;
+}
+.containerLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  margin: 20px;
+  flex-direction: row-reverse;
+}
+.paraContainer {
+  text-align: justify;
+}
+.sectionTitle {
+  text-decoration: underline;
+}
+.sectionContent {
+  padding-top: 15px;
+  font-family: "Ubuntu", sans-serif;
+}
+.imageContainer {
+  margin: 10px;
+}
+.imageContainer img {
+  width: 220px;
+  height: 220px;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 3px;
+}
+.thirdSection {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  height: 120vh;
+}
+.sponsorsHeading {
+  color: black;
+  text-shadow: 2px 1px white;
+  margin: 10px;
+  margin-top: 30px;
+}
+.sponsorsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.sponsorsItem {
+  width: 60%;
+  height: 170px;
+  margin: 20px;
+}
+.fourthSection {
+  background: blanchedalmond;
+  height: 100vh;
+}
+.contactHeading {
+  padding: 25px 0;
+  margin-bottom: 10px;
+}
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+.contactInput {
+  font-family: "Ubuntu", sans-serif;
+  width: 35%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 8px 4px grey;
+}
+.contactInput::placeholder {
+  font-family: "Ubuntu", sans-serif;
+}
+.contactBtn {
+  width: 15%;
+  font-size: 1rem;
+}
+.contactBtn:hover {
+  width: 15%;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+.textFooter {
+  text-align: center;
+  color: white;
+  font-size: 1em;
+  padding: 20px;
+  text-shadow: 2px 1px black;
+}
+
+.hamBurger {
+  display: none;
+  border: 3px solid white;
+  padding: 3px;
+  border-radius: 5px;
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top: 15px;
+}
+.line {
+  width: 33px;
+  background-color: white;
+  height: 4px;
+  margin: 5px;
+}

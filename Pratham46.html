@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Arrow Functions </title>
+</head>
+
+<body>
+    <div class="container">
+        This is Arrow Function Tutorial.
+    </div>
+    <script>
+        console.log('This is Arrow Function');
+        // Arrow Function (=>)
+        // let greet = () => {
+        //     console.log('Good Morning');
+
+        // }
+        // Short-cut 1
+        let greet = () => console.log('Good Morning');
+        // let sum = (a,b)=>{
+        //     return a+b;
+        // }
+        // Short-cut 2
+        let sum = (a, b) => a + b;
+        // Short-cut 3
+        let half = a => a / 2;
+
+        // function greet(){
+        //     console.log('Good Morning');
+
+        // }
+        greet();
+
+        setTimeout(() => {
+            console.log("We are inside setTimeout");
+        }, 3000);
+
+        let obj1 = {
+            greeting: " Have a Nice Day ! Sir.",
+            names: ["Pratham", "Adarsh", "Sahil", "Kunal"],
+            speak() {
+                // the .this can allow to take over greeting from outside of the student function as it takes it from its parent because it is a arrow function
+                this.names.forEach((student) => {
+                    console.log("Hello Mr. " + student + ". Welcome to JavaScript!" + this.greeting)
+                })
+                // the .this can allow only to take the greeting from inside of the student function as it can't take greeting outside of the function & can only take greeting withinh its function because it is a normal function
+                // this.names.forEach(function s(student){
+                //     console.log("Hello Mr. " + student + ". Welcome to JavaScript!"+ this.greeting )
+                // })
+            }
+        }
+        obj1.speak();
+        // Arrow Functions
+
+        // Creating a regular function
+        // function pratham(){
+        //     console.log('This is the Best Person Ever!');
+        // }
+
+        // const pratham=function(){
+        //     console.log('This is the Best Person Ever!');
+        // }
+
+        // Creating it to an arrow function
+        const pratham = () => {
+            console.log('This is the Best Person Ever!');
+        }
+        pratham();
+
+        // function returning something
+        // const greeting = function(){
+        // return "Good Morning ";
+        // }
+
+        // One Liners donot require braces/return & will automatically return
+        // const greeting = () => "Good Morning";
+
+        // const greeting = () => ({name : "Pratham"});
+
+        // Single Parameters do not require Parenthesis
+        // const greeting = name => "Good Morning " + name;
+
+        // Multiple Parameters would require Parenthesis
+        // const greeting = (name,ending) => "Good Morning " + name + ending;
+
+        // console.log(greeting());
+        // console.log(greeting('Pratham'));
+        // console.log(greeting('Pratham', ' Bye'));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators in JavaScript Tutorial</title>
+</head>
+
+<body>
+    <script>
+        console.log('Generators in JavaScript Tutorial');
+        // If we create an array it will take whole memory if we need one value. So,
+        // If array is too big, we dont want to store it
+        // Instead of storing all the arrays after generating. We can make,
+        // Generators are that which generate value on-the-fly while we need them or we use them
+        // Whenever we call Generator, it will generate new  values for us
+
+        function* numbersGen() {
+            let i = 0;
+            // yield 1;
+            // yield 2;
+            // yield 3;
+            // yield 4;
+            while (true) {
+                yield i++;
+                // yield (i++).toString();
+            }
+        }
+        const gen = numbersGen();
+        console.log(gen.next());
+        console.log(gen.next().value);
+        console.log(gen.next());
+        console.log(gen.next().value);
+        console.log(gen.next());
+        console.log(gen.next().value);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+// Terminal Commands
+
+1. Present Working DataBase
+db 
+
+2. Making or Switching to New DataBase
+use databaseName
+#Example
+use pratham
+OR
+use test
+// Empty-Made DataBase are not Shown or Created
+
+3. Show All DataBase including Defaults & Made
+show dbs
+// [admin, config, & local] DataBase are Defaults DataBases
+
+4. Show InnerContents of Current DataBase
+show collections
+
+5. To Make Text File in Current DataBase
+db.text
+// This will make a Text File(Collection) named of DataBase inside DataBase
+
+6. To Fill Context inside Text File
+db.text.insert({})
+// This will Add a Blank Document
+OR
+db.text.insert({"name":"Pratham"})
+
+7. Inserting One (1) Document inside Collection
+db.(collectionnName).insertOne({Object(Document)})
+
+8. Inserting As Many Documents as we want inside Collection
+db.(collectionnName).insertMany({As Many Objects(Documents) inside an Array},{...},{..},{.},{}])
+
+9. Show All Documents which is inside Collection
+db.(collectionnName).find()
+
+10. Show Only Filtered Documents as per Query which is inside Collection
+db.(collectionnName).find({objectKey:objectValue(Your Query to Filter)})
+// For Only One Filter
+
+10. Show Only Filtered Documents as per Query (Greater Than or Equal To) which is inside Collection
+db.(collectionnName).find({objectKey:{$gte:objectValue(Your Query to Filter)}})
+
+11. Show Only Filtered Documents as per Query (Greater Than) which is inside Collection
+db.(collectionnName).find({objectKey:{$gt:objectValue(Your Query to Filter)}})
+
+// Simlliarly, lt - Lesser Than &
+lte - Lesser Than or Equal To
+
+12. Use of AND Operator inside Query Filter to Queries Many Filters to Satisfy Together
+db.(collectionnName).find({objectKey1:objectValue1(Your Query to Filter),objectKey1:objectValue1(Your Query to Filter),...})
+
+13. Use of OR Operator inside Query Filter to Queries Many Filters and can Satisfy Any One of Them
+db.(collectionnName).find({or:[{objectKey1:objectValue1(Your Query to Filter)},{objectKey2:objectValue2(Your Query to Filter)},...]})
+// We should make Array of Filter Objects of Queries for OR Operator
+// We can use $gte, $gt, $lte & $lt inside Filter Query Object as before SameWay
+
+14. To Query Particular KeyValue pairs 
+// For Single KeyValue Pair
+db.(collectionnName).find({objectKey:objectValue(Your Query to Filter)},{objectKey:1})
+// For Multiple KeyValue Pairs
+db.(collectionnName).find({objectKey1:objectValue1(Your Query to Filter),objectKey2:objectValue2(Your Query to Filter),...},{objectKey1:1,objectKey2,...})
+
+15. Deleting One Document in Collection
+db.items.deleteOne({objectKey:objectValue(Your Query to Delete)})
+// It will Delete the Particular Document's First Occurence in case of Multiple Documents or Deletes the Particular Document in case of Single Document
+
+16. Deleting Many Documents in Collection
+db.items.deleteMany({objectKey:objectValue(Your Query to Delete)})
+// It will Delete All the Documents in the DataBase according to the Query
+
+17. Updating One Document in Collection
+db.items.updateOne({objectKey:objectValue(Your Query to Change},{$set:{objectKey:objectValue(Your Query to Set)}})
+db.items.updateOne({objectKey:objectValue(Your Query to Change},{$set:{objectKey1:objectValue1(Your Query to Set),objectKey2:objectValue2(Your Query to Set),...}})
+
+18. Updating Many Documents in Collection
+db.items.updateMany({objectKey:objectValue(Your Query to Change},{$set:{objectKey:objectValue(Your Query to Set)}})
+db.items,.updateMany(objectKey:objectValue(Your Query to Change},{$set:{objectKey1:objectValue1(Your Query to Set),objectKey2:objectValue2(Your Query to Set),...}})
+
+// We can use $gte, $gt, $lte & $lt inside Filter Query Object as before SameWay for all CRUD
+
+// CRUD- Create, Read, Update & Delete
+
+// ****** Inserting, Searching/Querying, Deleting, Updating Data in MongoDB ****** --> # CRUD Example
+show dbs
+db
+use prathamKart
+show dbs
+db
+db.items.insertOne({name:"Nothing Phone",price:60000,rating:4.5,quantity:1000,sold:100})
+// items is a Collection of DataBase prathamKart
+// And Object inside parenthesis is Document which is Inserted inside Collection i.e items
+db.items.insertMany([{name:"OnePlus +",price:100000,rating:4,quantity:100,sold:10},{name:"Samsung Z Flip",price:120000,rating:3,quantity:10000,sold:1000},{name:"Motorola Hungry",price:20000,rating:2.5,quantity:50000,sold:10000}])
+// If you Save Data in DataBase. Then, it wil be Store Permanently untill User Deletes it, it will persist there and we can Access to Data anytime after Closing and Opening of Server or Restarting Server
+// Query - Process of Taking Data from DataBases
+db.items.insertOne({name:"Redmi Volcano",price:50000,rating:4,quantity:5000,sold:500,isGaming:true})
+// You can Add More Fields in any Document you want
+db.items.find()
+// To Display All the Documents inside items Collection
+db.items.find({rating:4})
+// It will Filter and Return All the Results/Objects of the Query (Rating:4)
+db.items.find({rating:{$gte:3}})
+// It will Filter and Return All the Results/Objects of the Query Greater Than or Equal To (Rating:3)
+db.items.find({rating:{$gt:3}})
+// It will Filter and Return All the Results/Objects of the Query Greater Than (Rating:3)
+db.items.find({rating:{$lte:3}})
+// It will Filter and Return All the Results/Objects of the Query Lesser Than or Equal To (Rating:3)
+db.items.find({rating:{$lt:3}})
+// It will Filter and Return All the Results/Objects of the Query Lesser Than (Rating:3)
+// USE OF AND OPERATOR
+db.items.find({rating:{$gt:3},price:{$gt:30000}})
+// It will Filter and Return All the Results/Objects of the Queries Greater Than {(Rating:3) & (Price:30,000)}
+db.items.find({rating:{$gte:3},price:{$gt:30000}})
+// It will Filter and Return All the Results/Objects of the Queries Greater Than or Equal To (Rating:3) & Greater Than (Price:30,000)
+// Simlliarly, In the SameWay, We can do this for lt & lte
+// USE OF OR OPERATOR
+db.items.find({$or:[{rating:{$gt:3}},{price:{$gt:30000}}]})
+// It will Filter and Return All the Results/Objects of the Queries Greater Than {(Rating:3) or (Price:30,000)}
+// Simlliarly, In the SameWay, We can do this for gte, lt & lte
+db.items.find({rating:{$gt:3}},{rating:1})
+// It will Filter and Return All the Results/Objects.rating Only of the Query Greater Than (Rating:3)
+db.items.find({rating:{$gt:3}},{rating:1,quantity:1})
+// It will Filter and Return All the Results/Objects.rating & Results/Objects.quantity Only of the Query Greater Than (Rating:3)
+db.items.deleteOne({name:"OnePlus +"})
+// It will Delete the "OnePlus +" First Occurence in case of Multiple Documents or Deletes the Particular Document in case of Single Document
+db.items.deleteOne({name:"Motorola Hungry"})
+// It will Delete the "Motorola Hungry" First Occurence in case of Multiple Documents or Deletes the Particular Document in case of Single Document
+db.items.deleteMany({name:"Motorola Hungry"})
+// It will Delete All the "Motorola Hungry" Documents from the DataBase
+db.items.updateOne({name:"Motorola Hungry"},{$set:{price:5000,rating:1}})
+// It will Update the "Motorola Hungry" First Occurence in case of Multiple Documents or Updates the Particular Document in case of Single Document and makes price:5000 & rating:1
+db.items.updateOne({name:"Motorola Hungry"},{$set:{price:50000,rating:4}})
+db.items.updateOne({name:"Motorola Hungry"},{$set:{price:20000,rating:2.5}})
+// They will also update the Document
+db.items.updateMany({rating:{$gt:3}},{$set:{quantity:100,sold:50}})
+// It will Update All the rating Greater Than 3 Document from the DataBase

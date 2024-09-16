@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and nth child pseudo selectors</title>
+    <style>
+        .container {
+            display: block;
+            width: 200px;
+            margin: auto;
+        }
+
+        input {
+            display: block;
+        }
+
+        input[type="text"] {
+            border: 2px solid red;
+            padding: 20px;
+        }
+
+        a[target] {
+            font-size: 45px;
+            color: green;
+            text-decoration: none;
+        }
+
+        a[target="_self"] {
+            color: blue;
+            font-size: 10px;
+            text-decoration: none;
+
+        }
+
+        input[type="email"] {
+            color: brown;
+            background-color: teal;
+            border: 4px solid blueviolet;
+            padding: 10px;
+        }
+
+        /* Hence, These are the example of pseudo selectors which means you can target any tag and can specified it with its attribute and content inside attribute too  */
+        /* Syntax for it is yourtagname[yourattributename="value"] Example: input[type="text"] then write your css with curly brackets as usual {}*/
+        /* Here, you can also use syntax: yourtagname[yourattributename] only if you want to target the attribute only Example there is 2 a href tag with attribute target with value of one as _blank & another as _self ; If you want to change the followng a tags who uses attribute target then you can use only attribute name but if you have to assign different styles to different values of target attribute then u should use it's value too and its simple  */
+        /* For nth-child ; dafault starting value of n = 0 */
+
+        /* This will apply css for third child or list  */
+        /* li:nth-child(3){
+            color: cyan;
+        } */
+
+        /* This will apply css for even childs or lists */
+        /* li:nth-child(2n+0){
+            color: red;
+        } */
+        /* or  */
+        /* li:nth-child(even){
+            color: blue;
+        } */
+
+        /* This will apply css for odd childs or lists */
+        /* li:nth-child(2n+1){
+            color: yellow;
+        } */
+        /* or  */
+        /* li:nth-child(odd){
+            color: green;
+        } */
+
+        /* This will apply css for (multiple of 3) childs or lists */
+        /* li:nth-child(3n+3){
+            color: tomato;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">Go to Google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Go to facebook</a></h1>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter Your Name:">
+            <input type="email" placeholder="Enter Your email:">
+            <input type="password" placeholder="Enter Your Password:">
+            <input type="submit" value="Submit">
+
+        </form>
+        <ul>
+            <li class="item" id="item-1">Item1</li>
+            <li class="item" id="item-2">Item2</li>
+            <li class="item" id="item-3">Item3</li>
+            <li class="item" id="item-4">Item4</li>
+            <li class="item" id="item-5">Item5</li>
+            <li class="item" id="item-6">Item6</li>
+            <li class="item" id="item-7">Item7</li>
+            <li class="item" id="item-8">Item8</li>
+            <li class="item" id="item-9">Item9</li>
+            <li class="item" id="item-10">Item10</li>
+        </ul>
+    </div>
+</body>
+
+</html>

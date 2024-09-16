@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShortHand Character Classes(Regular Expressions) Tutorial</title>
+</head>
+
+<body>
+    <script>
+        console.log('This is ShortHand Character Classes Tutorial');
+
+        // Character Classes
+        let regex = /\wratham/; // \w --> One Word Character = _ or alphabets or numbers
+        regex = /\w+am/; // \w+ --> One or More Word Characters = _ or alphabets or numbers
+        regex = /\Wpratham/; // \W --> One Non-Word Character =  ,%,$,@
+        regex = /\W+pratham/; // \W+ --> One or More Non-Word Characters =  ,%,$,@
+        regex = /\dpra/; // \d --> Any One Digit = From 0 - 9
+        regex = /number \d+/; // \d+ --> One or More Digits = From 0 - 9
+        regex = /\D999/; // \D --> One Non-Digit = Anything except from 0 - 9
+        regex = /\D+999/; // \D+ --> One or More Non-Digits = Anything except from 0 - 9
+        regex = /\spratham/; // \s --> One White Space Character = " "(space)
+        regex = /\swith/; // \t means tab (TAB)
+        regex = /\s+phone/; // \s+ -->One or More White Space Characters = " "(space)
+        regex = /\Spratham/; // \s --> One Non-White Space Character = Anything except " "(space)
+        regex = /\S+pratham/; // \s+ -->One or More Non-White Space Characters = Anything except " "(space)
+
+        // Word Boundary
+        regex = /and\b/; // It means its a word boundary i.e word and ends here and new word starts after space or any non-word character
+
+        // Assertions
+        regex = /pra(?=tham)/; // (?=____) --> This means it only matches if 'pra' has 'tham' just after it 
+        regex = /pra(?!tham)/; // (?=____) --> This means it only matches if 'pra' doesn't has 'tham' after it & could have anything else
+
+        let str = "pratham and$%@ pratham 8%@RRRpratham\twith    pra           phone $%@number pratham9999999999";
+        let result = regex.exec(str);
+        console.log("This result from exex is ", result);
+
+        if (regex.test(str)) {
+            console.log(`The string "${str}" matches the exression ${regex.source} `);
+        }
+        else {
+            console.log((`The string "${str}" does not match the exression ${regex.source} `));
+        }
+    </script>
+</body>
+
+</html>

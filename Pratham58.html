@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling & Try Catch Tutorial</title>
+</head>
+
+<body>
+    <script>
+        console.log('This is Error Handling & Try Catch Tutorial');
+        // Pretend this is coming from a server as response
+        // let a = "Pratham Bhai";
+        let a = undefined;
+        if (a != undefined) {
+            // console.log('This is not undefined');
+            throw new Error('This is not undefined');
+        }
+        else {
+            console.log('This is undefined');
+        }
+
+        // Try means try to run it 
+        // if runs then ok otherwise run catch instead
+        try {
+            // invalid
+            console.log('We are inside try block');
+            // againinvalid
+            null.console
+        } catch (error) {
+            console.log('Are you ok ?');
+            console.log(error);
+            // console.log(error.name);
+            // console.log(error.message);
+        } finally {
+            console.log('Finally, We will run this');
+        }
+    </script>
+</body>
+
+</html>

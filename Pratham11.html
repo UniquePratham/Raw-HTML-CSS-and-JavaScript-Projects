@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors & More Designing</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            background-color: palegreen;
+            padding: 34px;
+            margin: 34px auto;
+            width: 666px;
+
+        }
+        a{
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: yellow;
+            background-color: rgb(153, 0, 255);
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+        a:hover{
+            background-color: rgb(192, 127, 192);
+            color: rgb(228, 228, 129);
+        }
+        a:visited{
+            background-color: rgb(87, 64, 109);
+            color: rgb(150, 150, 7);
+        }
+        a:active{
+            background-color: cadetblue;
+            color: chartreuse;
+        }
+        .btn:hover{
+            background-color: aquamarine;
+            color: grey;
+        }
+        .btn{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: aqua;
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi asperiores ipsa nobis obcaecati modi quo voluptatibus dolores nam dolore magni?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum ab quo eos aliquid molestias voluptatum optio ipsa sit nihil tempore!</p>
+        <a href="https://www.codewithharry.com" >Read More</a>
+        <button class="btn">Contact Us</button>
+    </div>
+</body>
+</html>

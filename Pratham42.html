@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navigating, Traversing & Manipulating DOM</title>
+</head>
+
+<body>
+  <!-- DOM means everything written in html module or code  -->
+  <div id="main" class="container">
+    <ul id="nav">
+      <li class="item">Home</li>
+      <li class="item">About</li>
+      <li class="item">Contact Us</li>
+      <li class="item">Services</li>
+      <li class="item">More About Us</li>
+    </ul>
+  </div>
+  <div class="container">Another Container</div>
+  <script>
+    let main = document.getElementById("main");
+    console.log("Navigate Element by Id" + main);
+    let nav = document.getElementById("nav");
+    console.log("Navigate Element by Id" + nav);
+    // To change element in JavaScript, we use .innerHTML
+    // nav.innerHTML="<li>Dynamic Website</li>";
+
+    let containers = document.getElementsByClassName("container");
+    console.log("Navigate Element by Class Name" + containers);
+
+    // Selector indexed first in DOM will arrive
+    let sel = document.querySelector(".container");
+    console.log(
+      "Selector returns by Navigate Element by Any Selectors" + sel
+    );
+    let sel2 = document.querySelector("#nav");
+    console.log("Selector returns", sel2);
+    let sel4 = document.querySelector("#nav>li");
+    console.log("Selector returns", sel4);
+
+    // All Selectors in DOM will arrive
+    let sel3 = document.querySelectorAll(".container");
+    console.log("Selector returns", sel3);
+    let sel5 = document.querySelectorAll("#nav>li");
+    console.log("Selector returns", sel5);
+    // To change 1st li element here home to inserted, we use
+    // sel5[0].innerHTML="Inserted";
+
+    // This Array.from() helps to make array from an object-like model or DOM
+    // let a=document;
+    // a=document.all;
+    // Array.from(a).forEach(element => {
+    //     console.log(element);
+    // });
+    // a=document.links;
+
+    // Using for selecting specific content after selecting specific tag
+    //   let element = document.getElementById("Idname");
+    //   element=element.className;
+    //   element=element.childNodes;
+    //   element=element.childNodes[indexValue].nodeName; - For particular node name
+    //   element=element.childNodes[indexValue].nodeType; - For particular node type
+    //   element=element.firstChild;
+    //   element=element.firstElementChild;
+    //   element=element.lastChild;
+    //   element=element.lastsElementChild;
+    //   element=element.childElementCount;
+    //   element=element.nextSibling;
+    //   element=element.nextElementSibling;
+    //   element=element.parentNode;
+    //   element.style.attribute='value';
+    //   element.innerText='Text';
+    //   element.innerHTML='HTML';
+    //   element=document.getElementsByTagName('Tag Name');
+    //   element.replaceChild(to-repace-with,what-to-replace);
+    //   element.removeChild(what-to-remove);
+    //   element.getAttribute('Attribute you want to see');
+    //   element.hasAttribute('Attribute you want to check/confirm; it have or not');
+    //   element.removeAttribute('Attribute you want to remove');
+    //   NodeType List Referring Number:
+    //   1. Element
+    //   2. Attribute
+    //   3. Text Node
+    //   8. Comment
+    //   9. document
+    //   10.docType
+
+    // The difference between childnodes & children is that childnodes will show/display all the content along with texts, comments & others; but children deals only with the HTML Tags & display the Tags only
+
+    // Creating an Element in JavaScript
+    let element = document.createElement("li");
+
+    // Adding a class name to the li element
+    element.className = "item";
+
+    // Adding id name to the li element
+    element.id = "unique";
+
+    // Adding attribute to the li element
+    element.setAttribute("title", "myTitle");
+
+    // Adding innerText to the li element
+    let text = document.createTextNode("SomeThing");
+    element.appendChild(text);
+    //   element.innerText='EveryThing';
+    //   element.innerHTML = "<b>EveryThing</b>";
+
+    // Appending or Assigning the li element in ul
+    let ul = document.getElementById("nav");
+    ul.appendChild(element);
+    //   console.log(ul);
+    //   console.log(element);
+
+    // We can create another element & if want to replace with first then we can use
+    // element.replaceWith(element.New);
+
+    // This to write something on DOM
+    // document.write('This is Document Write');
+
+    // JavaScript Console API 
+    // Assertion Successful
+    console.assert(4 == (6 - 2));
+    // Assertion Failed
+    console.assert(4 == (6 - 4));
+        //console.log, console.warn, console.error
+
+        // In Browser-Console
+        // Number denotes Blue Color
+        // String denotes Black Color
+  </script>
+</body>
+
+</html>

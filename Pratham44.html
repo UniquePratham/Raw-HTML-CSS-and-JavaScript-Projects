@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | SetTimeOut & ClearTimeOut</title>
+
+</head>
+
+<body>
+    <div class="container">
+        Time now is <span id="time"></span>
+    </div>
+    <script>
+        console.log("This is JavaScript Tutorial");
+        // setTimeout --> Allows us to run the function once after the interval of time
+        // clearTimeout --> Used to stop/clear setTimeout
+        // setInterval --> Allows us to run the function repeatedly after the interval of time
+        // clearInterval --> Used to stop/clear setInverval
+
+        function greet(name, byeText) {
+            console.log("Hello! Good Morning! " + name + " " + byeText);
+        }
+        // greet();
+        // setTimeout(greet, 3000, "Pratham","Take Care!");
+        // setTimeout(greet(), 3000, "Pratham","Take Care!"); This is error !!! -->Wrong as it is calling function inside setTimeout
+        // timeOut=setTimeout(greet, 3000, "Pratham","Take Care!");
+        // console.log(timeOut);
+
+        // Example to use clearTimeout is
+        // If you want to let user read the article for 20 seconds in the page and want to ask user to signup but user signs up before 20 seconds then we can use clearTimeout to clear setTimeout
+        // clearTimeout(timeOut);
+
+        // setInterval(greet, 1000, "Pratham","Take Care!");
+        // intervalId=setInterval(greet, 1000, "Pratham","Take Care!");
+        // console.log(intervalId);
+        // clearInterval(intervalId);
+
+        // If you want to display time in your webpage then 
+        function displayTime(){
+            time=new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML=time;
+        }
+        setInterval(displayTime,1000);
+    </script>
+</body>
+
+</html>

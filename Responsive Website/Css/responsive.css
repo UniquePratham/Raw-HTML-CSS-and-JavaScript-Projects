@@ -1,0 +1,215 @@
+@media only screen and (max-width: 900px) {
+  .sponsorsItem {
+    width: 60%;
+    height: 23vh;
+    margin: 20px;
+    overflow: hidden;
+  }
+  .thirdSection {
+    height: 90vh;
+  }
+  .fourthSection {
+    height: 105vh;
+  }
+  .contactInput {
+    width: 60%;
+  }
+  .contactBtn {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 240px) {
+  .sponsorsItem {
+    width: 60%;
+    height: 23vh;
+    margin: 15px;
+    overflow: hidden;
+  }
+  .mainBox {
+    flex-direction: column-reverse;
+  }
+  .firstHalf {
+    padding: 0;
+    padding-top: 20px;
+  }
+  .textBig {
+    font-size: 1.5rem;
+  }
+  .textMedium {
+    font-size: 1rem;
+  }
+  .textSmall {
+    font-size: 0.5rem;
+  }
+  .secondHalf {
+    width: 90%;
+    height: 50%;
+    margin-top: 50px;
+  }
+  .secondHalf img {
+    width: 50%;
+    height: 100%;
+  }
+  .firstSection {
+    height: 150vh;
+  }
+  .thirdSection {
+    height: 80vh;
+  }
+  .fourthSection {
+    height: 80vh;
+  }
+  .buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btnBig {
+    width: 75%;
+    height: 50px;
+    font-size: 0.7rem;
+  }
+  .containerRight,
+  .containerLeft {
+    flex-direction: column;
+  }
+  .imageContainer img {
+    width: 120px;
+    height: 120px;
+  }
+  .thirdSection {
+    height: 100vh;
+  }
+  .sponsorsContainer {
+    margin: 5px;
+  }
+  .fourthSection {
+    height: 150vh;
+  }
+  .contactContainer {
+    height: 80%;
+  }
+  .contactContainer input {
+    height: 15px;
+  }
+  .contactInput {
+    width: 70%;
+    font-size: 1rem;
+  }
+  .contactBtn {
+    width: 30%;
+  }
+  .textFooter {
+    font-size: 0.5rem;
+  }
+  .heaDingResp {
+    font-size: 1.5rem;
+    padding: 0;
+    padding-top: 15px;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 458px) and (max-width: 690px) {
+  .buttons {
+    justify-content: center;
+    align-items: center;
+  }
+  .btnBig {
+    font-size: 1rem;
+    width: 60%;
+    height: 50px;
+  }
+}
+@media only screen and (min-width: 241px) and (max-width: 457px) {
+  .buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btnBig {
+    width: 60%;
+    margin: 5px 3px;
+    height: 30px;
+    font-size: 0.6rem;
+  }
+}
+@media only screen and (min-width: 241px) and (max-width: 690px) {
+  .firstSection {
+    height: 70vh;
+  }
+  .mainBox {
+    flex-direction: column-reverse;
+    padding-top: 20px;
+  }
+  .firstHalf {
+    padding: 0;
+    padding-top: 20px;
+  }
+  .textBig {
+    font-size: 1.5rem;
+  }
+  .textMedium {
+    font-size: 1rem;
+  }
+  .textSmall {
+    font-size: 0.5rem;
+  }
+  .secondHalf {
+    width: 85%;
+    height: 30%;
+  }
+  .secondHalf img {
+    width: 50%;
+    height: 90%;
+  }
+  .containerRight,
+  .containerLeft {
+    flex-direction: column;
+  }
+  .imageContainer img {
+    width: 120px;
+    height: 120px;
+  }
+  .thirdSection {
+    height: 100vh;
+  }
+  .fourthSection {
+    height: 120vh;
+  }
+  .contactHeading {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .hamBurger {
+    display: block;
+  }
+  .navBar {
+    flex-direction: column;
+    font-size: 1.5rem;
+    position: static;
+    transition: all 0.7s ease-in-out;
+    height: 400px;
+  }
+  .navList {
+    flex-direction: column;
+  }
+  .navList li {
+    padding: 10px;
+  }
+  .rightNav {
+    flex-direction: column;
+  }
+  .logo {
+    width: 40%;
+  }
+  #searchBox {
+    width: 100%;
+  }
+  .hNavResp {
+    height: 70px;
+  }
+  .vHiddenResp {
+    display: none;
+  }
+}

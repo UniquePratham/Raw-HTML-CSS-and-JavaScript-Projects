@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+.animationContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#sky {
+  height: 65vh;
+  width: 100vw;
+  background-image: url("../Resource/clouds.gif");
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+#birds {
+  height: 20vh;
+  width: 20vw;
+  background-image: url("../Resource/flyingbirds.png");
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  margin: auto;
+  mix-blend-mode: multiply;
+  top: 3rem;
+  /* left: 50rem; */
+  animation: birdsMove linear 4s infinite;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+#sun {
+  height: 25vh;
+  width: 13vw;
+  background-image: url(../Resource/sun.png);
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  margin: auto;
+  top: 1rem;
+  left: 20rem;
+}
+#trees {
+  height: 100vh;
+  width: 100vw;
+  background: url("../Resource/trees.png");
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  bottom: 8rem;
+}
+#track {
+  height: 20vh;
+  width: 500rem;
+  background: url("../Resource/track.png");
+  /* background-size: cover; */
+  position: absolute;
+  background-repeat: repeat-x;
+  bottom: 0;
+  animation: trackMove linear 0.6s infinite;
+}
+#car {
+  height: 8rem;
+  width: 30rem;
+  background: url("../Resource/car_body.png");
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  bottom: 10rem;
+  left: 40rem;
+  animation: carShake linear 1s infinite;
+}
+#leftTyre {
+  height: 5.9rem;
+  width: 5.9rem;
+  background: url(../Resource/car_wheel_left.png);
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  bottom: -3rem;
+  left: 3.4rem;
+  animation: tyreRotation linear 0.2s infinite;
+}
+#rightTyre {
+  height: 6rem;
+  width: 6rem;
+  background: url(../Resource/car_wheel_right.png);
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  bottom: 3rem;
+  left: 18.5rem;
+  animation: tyreRotation linear 0.2s infinite;
+}
+#car2 {
+  height: 12rem;
+  width: 30rem;
+  background: url("../Resource/car_body2.png");
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  bottom: 2.5rem;
+  right: 28rem;
+  animation: carShake linear 1s infinite;
+  z-index: 1;
+}
+#leftTyre2 {
+  height: 5.5rem;
+  width: 5.5rem;
+  background: url("../Resource/car2_wheel_left.png");
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  bottom: -1rem;
+  right: 20.7rem;
+  animation: tyreRotation linear 0.2s infinite;
+}
+#rightTyre2 {
+  height: 5.5rem;
+  width: 5.5rem;
+  background: url("../Resource/car2_wheel_right.png");
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  bottom: -1rem;
+  right: 3rem;
+  animation: tyreRotation linear 0.2s infinite;
+}
+
+@keyframes tyreRotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes trackMove {
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes birdsMove {
+  0% {
+    right: 0rem;
+  }
+  12.5% {
+    right: 10rem;
+  }
+  25% {
+    right: 30rem;
+  }
+  50% {
+    right: 50rem;
+  }
+  75% {
+    right: 70rem;
+  }
+  87.5% {
+    right: 90rem;
+  }
+  100% {
+    right: 100rem;
+  }
+}
+@keyframes carShake {
+  0% {
+    transform: translateY(-0.4rem);
+  }
+  50% {
+    transform: translateY(+0.4rem);
+  }
+  100% {
+    transform: translateY(-0.4rem);
+  }
+}

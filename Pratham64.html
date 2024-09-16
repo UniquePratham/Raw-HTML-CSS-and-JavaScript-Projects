@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference Between For In Loop & For Of Loop Tutorial</title>
+</head>
+
+<body>
+    <script>
+        console.log('This is For In Loop & For of Loop Difference Tutorial');
+        let people = ["Pratham", "Adarsh", "Sahil", "Kunal", "Aditya"];
+
+        // Traditional For Loop
+        for (let index = 0; index < people.length; index++) {
+            const element = people[index];
+            // console.log(element);
+        }
+
+        // ********* For-In Loop & Traditional For Loop *********
+
+        // 1. Iterating an object
+        let obj = {
+            name: "Pratham",
+            language: "JavaScript",
+            hobbies: "Android App Development"
+        }
+        // console.log(obj);
+
+        // 1.1 Iterating an object using Traditional For Loop
+        for (let index = 0; index < Object.keys(obj).length; index++) {
+            const element = obj[Object.keys(obj)[index]]; // Prints Corresponding values of name, language & hobbies
+            // const element =[Object.keys(obj)[index];   // Prints name, language & hobbies
+            // console.log(element);
+        }
+
+        // 1.2 Iterating an object using For-In Loop
+        for (const key in obj) {
+            const element = obj[key];
+            // console.log(obj.name);
+            // console.log(element);
+        }
+
+        // 2.Iterating a string
+        let myString = "This is my string";
+
+        // 2.1 Iterating a string using For-In Loop
+        // We can use For-In Loop with strings to loop through all the characters
+        for (let char in myString) {
+            const element = myString[char];
+            // console.log(element);
+        }
+
+        // 2.2 Iterating a string using Traditional For Loop
+        for (let char = 0; char < myString.length; char++) {
+            const element = myString[char];
+            // console.log(element);
+        }
+
+        // ********* For-Of Loop *********
+
+        for (let name of people) {
+            // const element = name; // This gives index if we use For-In
+            const element = name;
+            // console.log(element);
+        }
+        for (const name of myString) {
+            console.log(name);
+        }
+    </script>
+</body>
+
+</html>

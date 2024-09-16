@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES-6 Classes & Inheritance</title>
+  </head>
+  <body>
+    <div class="container">This is a container</div>
+    <script>
+      // Defining the class
+      //   Constructor is used to run while making an object using class & for class
+      //   All the functions included in the class are include in the prototype of the class
+      class Employee {
+        constructor(givenName, givenExperience, givenDivision) {
+          this.name = givenName;
+          this.experience = givenExperience;
+          this.division = givenDivision;
+        }
+        slogan() {
+          return `I am ${this.name} and this company is the best for ${this.division}`;
+        }
+        joiningYear() {
+          return 2022 - this.experience;
+        }
+        static add(a, b) {
+          return a + b;
+        }
+      }
+      //   To use other function; we need to declare the object; we can't directly use the class i.e employee
+      pratham = new Employee("Pratham", 10, "Hacking");
+      console.log(pratham);
+      callingSlogan = pratham.slogan();
+      console.log(callingSlogan);
+      callingJoiningyear = pratham.joiningYear();
+      console.log(callingJoiningyear);
+      //   To use static fucntion; we don't need to declare the object; we can directly use the class i.e employee
+      callingAdd = Employee.add(3, 4);
+      console.log(`The add is ${callingAdd}`);
+
+      //   Inherits the employee class in programmer class
+      class Programmer extends Employee {
+        constructor(
+          givenName,
+          givenExperience,
+          givenDivision,
+          language,
+          github
+        ) {
+          super(givenName, givenExperience, givenDivision);
+          this.language = language;
+          this.github = github;
+        }
+        favouriteLanguage() {
+          if (this.language == "Python") {
+            return "Python";
+          } else {
+            return "JavaScript";
+          }
+        }
+        static mutliply(a, b) {
+          return a * b;
+        }
+      }
+      pratham2 = new Programmer(
+        "Pratham2",
+        5,
+        "Cyber Anaylst",
+        "Python",
+        "Pratham240"
+      );
+      console.log(pratham2);
+      console.log(pratham2.favouriteLanguage());
+      callingMultiply = Programmer.mutliply(3, 4);
+      console.log(`The multiply is ${callingMultiply}`);
+    </script>
+  </body>
+</html>

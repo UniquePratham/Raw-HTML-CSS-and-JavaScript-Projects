@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <style>
+        .firstBar,
+        .inputBar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 100;
+            text-shadow: 1px 2px 1px gray;
+            margin: 1rem;
+            padding: 0.5rem;
+        }
+
+        .inputBarBox {
+            font-size: 3rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 100;
+            text-shadow: 1px 2px 1px gray;
+            text-align: center;
+            height: 4rem;
+            width: 55rem;
+        }
+
+        .ResultBar,
+        .PreviousEntryBar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 100;
+            text-shadow: 1px 2px 1px gray;
+            margin: 1rem;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        .checkBtn {
+            height: 4rem;
+            width: 8rem;
+            text-align: center;
+            margin: 1rem;
+            padding: 0.3rem;
+            cursor: pointer;
+            font-size: 2rem;
+            background-color: black;
+            border: 2px solid gray;
+            color: antiquewhite;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="firstBar">
+    </div>
+    <div class="inputBar">
+        <input type="text" placeholder="Guess The Number Here!!! between 1 - 100" class="inputBarBox">
+        <button class="checkBtn">Check</button>
+    </div>
+    <div class="ResultBar">
+    </div>
+    <div class="PreviousEntryBar">
+    </div>
+</body>
+<script>
+    console.log('Guess The Number !!!');
+    let firstBar = document.querySelector('.firstBar');
+    let inputBar = document.querySelector('.inputBar');
+    let inputBarBox = document.querySelector('.inputBarBox');
+    let ResultBar = document.querySelector('.ResultBar');
+    let checkBtn = document.querySelector('.checkBtn');
+    let PreviousEntryBar = document.querySelector('.PreviousEntryBar');
+    let previousNumbers = [];
+    firstBar.innerText = 'Let the Computer think of a Number';
+    inputBar.style.display = 'none';
+    let numGuess = 0;
+    a1 = 1;
+    b1 = 100;
+    let computerNumber = Number.parseInt(a1 + (b1 - a1) * Math.random());
+    // console.log("The random number is ", computerNumber);
+    setTimeout(() => {
+        firstBar.innerText = 'The Computer is ready and Number has been thought';
+        inputBar.style.display = 'flex';
+    }, 2000);
+    checkBtn.addEventListener('click', () => {
+        // console.log(numGuess);
+        let userInput = Number.parseInt(inputBarBox.value);
+        if (userInput == computerNumber) {
+            numGuess = numGuess + 1;
+            let score = 100 - numGuess;
+            ResultBar.innerHTML = `Congratulations! Right Answer !!! Score - ${score}`;
+        }
+        else {
+            numGuess = numGuess + 1;
+            previousNumbers.push(`${userInput}`);
+            // console.log(previousNumbers);
+            if (userInput > computerNumber) {
+                ResultBar.innerHTML = `Wrong Answer <br>
+                The Number is lesser than ${userInput} !!!`;
+            }
+            else {
+                ResultBar.innerHTML = `Wrong Answer <br>
+                The Number is greater than ${userInput} !!!`;
+            }
+            PreviousEntryBar.innerHTML = ``;
+            PreviousEntryBar.innerHTML = `Previous Guesses - `;
+            let yesnoComma;
+            if (numGuess > 1) {
+                yesnoComma = ',';
+            }
+            else {
+                yesnoComma = '';
+            }
+            for (let i = 0; i < previousNumbers.length; i++) {
+                if (i == 0) {
+                    PreviousEntryBar.innerHTML += ` ${previousNumbers[i]} `;
+                }
+                else {
+                    PreviousEntryBar.innerHTML += `${yesnoComma} ${previousNumbers[i]} `;
+                }
+            }
+            inputBarBox.value = '';
+        }
+    })
+</script>
+
+</html>

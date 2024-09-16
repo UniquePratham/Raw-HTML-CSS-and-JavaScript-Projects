@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to Magic Notes App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
+    <style>
+        html {
+            font-size: 14px;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .cornerPen {
+            color: dodgerblue;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            text-shadow: 1px 1px 1px black;
+            font-size: 1.2rem;
+            margin: 6px;
+        }
+
+        .alert {
+            position: fixed !important;
+            z-index: 1;
+            width: 100vw;
+        }
+
+        .flex-end {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .marpad {
+            margin: 3px;
+        }
+
+        #clearTextareaText {
+            margin: 3px 1px;
+            display: none;
+            position: absolute;
+            top: 10.3rem;
+            right: 2.3rem;
+        }
+
+        .unbookMark {
+            position: absolute;
+            top: -7px;
+            left: -7px;
+            font-size: 1.5rem;
+            color: darkblue;
+            cursor: pointer;
+            text-shadow: 2px 1px 5px black;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .bookMark {
+            font-size: 1.8rem;
+            transform: rotate(330deg);
+            position: absolute;
+            top: -7px;
+            left: -7px;
+            color: darkblue;
+            cursor: pointer;
+            text-shadow: 2px 1px 5px black;
+            transition: all 0.1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top badge-primary">
+        <a class="navbar-brand" href="index.html">Magic Notes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <button class="btn badge-primary my-2 my-sm-0 d-none" type="delete" id="deleteAll">Delete
+                        All Notes</button>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search"
+                    aria-label="Search">
+                <i class="fa fa-search"></i>
+            </form>
+        </div>
+    </nav>
+    <div id="dlt-message"></div>
+    <div id="message"></div>
+    <div class="container my-3">
+        <h1>Magic Notes</h1>
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">
+                    <h5 class="card-title">Add title</h5>
+                    <input type="search" class="form-control" id="addTitle" aria-describedby="title"
+                        placeholder="Enter Title of Your Note !!!">
+                </div>
+                <div class="form-group">
+                    <h5 class="card-title">Add a note</h5>
+                    <div class="addNoteandDustbin">
+                        <textarea class="form-control" id="addTxt" rows="3"
+                            placeholder="Enter Content of Your Note !!!"></textarea>
+                        <button class="btn btn-primary" id="clearTextareaText"><i class="fa fa-trash-o"></i></button>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="addBtn">Add Note</button>
+            </div>
+        </div>
+        <hr>
+        <h1>Your Notes</h1>
+        <hr>
+        <div id="notes" class="row container-fluid">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+    <script src="https://kit.fontawesome.com/1a00293417.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

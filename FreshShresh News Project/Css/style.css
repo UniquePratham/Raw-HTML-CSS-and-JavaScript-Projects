@@ -1,0 +1,22 @@
+.hover:hover{
+    color:cyan !important;
+    cursor: pointer;
+}
+.active{
+    text-shadow: 1px 1px black;
+    font-weight: 1000;
+}
+.text-white{
+    color: white !important;
+}
+.TitleDropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dropdown-item{
+    cursor: pointer;
+}
+.btn-group{
+    width: 15rem;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow & Text Shadow</title>
+    <style>
+        .container{
+            display: flex;
+
+        }
+        .card{
+            padding: 23px 12px;
+            /* border: 2px solid red; */
+            background-color: burlywood;
+            margin: 23px 12px;
+            /* box-shadow: (First is reponsible for right or left) +ve means right & -ve means left (Second is responible for top and bottom) +ve means bottom & -ve means top (color)  */
+            /* box-shadow: offset-x offset-y color; */
+
+            /* box-shadow: 10px 15px green;  */
+            /* right,bottom*/
+
+            /* box-shadow: -10px 15px blue;  */
+            /* left,bottom*/
+
+            /* box-shadow: 10px -15px red;  */
+            /* right,top*/
+
+            /* box-shadow: -10px -15px yellow; */
+            /* left,top*/
+
+            /* We can add blur-radius and spread-radius too in between offset-y and color for enhancement */
+            /* box-shadow: offset-x offset-y blur-radius color; */
+            /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+
+            /* Here 30px is blur-radius */
+            /* box-shadow: 10px 15px 30px green;  */
+
+            /* Here 40px is spread-radius */
+            /* box-shadow: 10px 15px 30px 40px green;  */
+
+            /* We can use rgba colour to defintite color in red green blue mixture as rgb and a means alpha which indicates darkness of color which is always less or equal to 1 and greater or equal to 0 and it can't be negative and can also be written as Percentage  */
+
+            /* Here 0.5 is alpha (a) of rgba */
+            /* box-shadow: 10px 15px 30px 40px rgba(100, 100, 100, 0.5);  */
+
+            /* Till now we have used shadow outside the box but if we want to give shadow inside to the box then we can use inset in the beginning of the box-shadow command */
+            /* box-shadow: inset 10px 15px 30px 40px green;  */
+
+            /* We can use multple shadows by using "," (comma) Example: */
+            /* box-shadow: 10px 15px 30px 26px green, 56px 46px 63px 68px red; */
+        }
+        .card h2{
+            text-shadow: 1px 1px white ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is C++ Course</h2>
+            <p>I have started C++ course which does not mean that we will stop this course. We will continue this course to completion. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint at recusandae necessitatibus repellendus repudiandae, iusto quos magnam vel qui cum ea, magni illo hic. Temporibus repellendus animi omnis voluptatum libero dolorum culpa nulla dolore!</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is HTML Course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint at recusandae necessitatibus repellendus repudiandae, iusto quos magnam vel qui cum ea, magni illo hic. Temporibus repellendus animi omnis voluptatum libero dolorum culpa nulla dolore!</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint at recusandae necessitatibus repellendus repudiandae, iusto quos magnam vel qui cum ea, magni illo hic. Temporibus repellendus animi omnis voluptatum libero dolorum culpa nulla dolore!</p>
+        </div>
+    </div>
+</body>
+
+</html>

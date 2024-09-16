@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression - Metacharacters, Character Sets, Quantifiers, Groupings Tutorial</title>
+</head>
+
+<body>
+    <script>
+        console.log('This is Regular Expression - Metacharacters Tutorial');
+        let regex = /pratham/;
+        // Some  of the MetaCharacters are -
+        regex = /^pra/; // ^ --> It means expression will only match if full string starts with  
+        regex = /am$/; // $ --> It means expression will only match if full string ends with  
+        regex = /pr.tham/; // . --> It can substitute any one character in place of . (Any one character)
+        regex = /pri*ham/; // * --> It can substitute any O or (many character in between which is before *)  in place of * (Any 0 character or Many same character which is before * is allowed)
+        regex = /pra?tham?/; // ? --> It is a optional character (It doesn't matter whether it exist or not) 
+        regex = /pr\*tham/; // \ --> It will use metacharacter as a normal character for matching in the string
+        regex = /pr+tham/; // + --> Same as *
+
+        let str = "pratham is a good boy and pratham is code with pratham";
+        let result = regex.exec(str);
+        console.log("This result from exex is ", result);
+
+        if (regex.test(str)) {
+            console.log((`The string "${str}" matches the exression ${regex.source} `));
+        }
+        else {
+            console.log((`The string "${str}" does not match the exression ${regex.source} `));
+        }
+
+
+        console.log('This is Regular Expression - Character Sets, Quantifiers, Groupings Tutorial');
+        // Character Sets --> [] (Square Brackets)
+        let regex2 = /p[a-z]atham/; // [a-z] can be any character from a to z only
+        regex2 = /p[pra]atham/; // [pra] can be p, r, or a only
+        regex2 = /p[0-9]atham/; // [0-9] can be any number from 0 to 9 only
+        regex2 = /p[2-5]atham/; // [2-5] can be any number from 2 to 5 only
+        regex2 = /p[123]atham/; // [123] can be 1, 2, or 3 only
+        regex2 = /p[a-g]atham/; // [a-g] can be any character from a to g only
+        regex2 = /p[A-Z]atham/; // [A-Z] can be any character from A to Z only
+        regex2 = /p[A-G]atham/; // [A-G] can be any character from A to G only
+        regex2 = /p[PRA]atham/; // [PRA] can be P, R, OR A only
+        regex2 = /p[^pra]atham/; // [^pra] can be any character other than p, r, or a (^ --> not)
+        regex2 = /p[a-zA-Z]atham/; // [a-zA-Z] can be any character from a to z or A to Z only
+        regex2 = /p[a-zA-Z]at[0-9]a[pra]/; // [a-zA-Z] can be any character from a to z or A to Z only
+        // We can use multiple character sets in regular expression
+
+        // Quantifiers --> {} (Curly Brackets)
+        regex2 = /prath{2}m/ // {2} should be exactly 2 times serially from its position
+
+        regex2 = /prath{0,2}m/ // {2} should be exactly 0 time, 1 time, or 2 times serially from its position
+
+        // Groupings --> () (Parenthesis)
+        regex2 = /pra{2}/ // It means it should be pr and a 2 times
+
+        regex2 = /(pra){2}/ // It means it should be pra 2 times () ; this will group pra
+        regex2 = /(pra){2}([0-9]r){3}/
+        // We can use character sets, quantifiers & groupings together 
+
+        let str2 = "prapra2r4r6r bhai";
+        // let str2 = "pratham bhai";
+        // let str2 = "prapra bhai";
+        let result2 = regex2.exec(str2);
+        console.log("This result from exex is ", result2);
+        if (regex2.test(str2)) {
+            console.log((`The string "${str2}" matches the exression ${regex2.source} `));
+        }
+        else {
+            console.log((`The string "${str2}" does not match the exression ${regex2.source} `));
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid + Media Queries</title>
+</head>
+<style>
+    .container {
+        grid-template-areas: 
+        'navbar navbar navbar navbar'
+        'section section aside1 aside1'
+        'section section aside2 aside2'
+        'footer footer footer footer';
+        display: grid;
+        gap: 1rem;
+    }
+
+    @media only screen and (max-width:300px) {
+        body {
+            display: block;
+            background-color: tomato;
+        }
+        .container {
+        grid-template-areas: 
+        'navbar navbar navbar navbar'
+        'section section section section'
+        'section section section section'
+        'footer footer footer footer';
+    }
+    #aside1{
+        display: none;
+    }
+    #aside2{
+        display: none;
+    }
+    }
+
+    @media only screen and (min-width:300px) and (max-width:700px) {
+        body {
+            display: block;
+            background-color: blue;
+        }
+        .container {
+        grid-template-areas: 
+        'navbar navbar navbar navbar'
+        'section section section section'
+        'aside1 aside1 aside1 aside1'
+        'aside2 aside2 aside2 aside2'
+        'footer footer footer footer';
+        }
+    }
+
+    @media only screen and (min-width:700px) and (max-width:1100px) {
+        body {
+            display: block;
+            background-color: red;
+        }
+        .container {
+        grid-template-areas: 
+        'navbar navbar navbar navbar'
+        'section section section section'
+        'aside1 aside1 aside2 aside2'
+        'footer footer footer footer';
+        }
+    }
+
+    @media only screen and (min-width:1100px) and (max-width:2000px) {
+        body {
+            display: block;
+            background-color: green;
+        }
+        .container {
+        grid-template-areas: 
+        'navbar navbar navbar navbar'
+        'section section section aside1'
+        'section section section aside2'
+        'footer footer footer footer';
+    }
+    }
+
+    @media only screen and (min-width:2000px) {
+        body {
+            display: block;
+            background-color: yellow;
+        }
+    }
+
+    .bdr {
+        border: 2px solid orangered;
+        background-color: yellowgreen;
+        color: darkcyan;
+        padding: 15px;
+
+    }
+    nav{
+        grid-area: navbar;
+    }
+    section{
+        grid-area: section;
+    }
+    #aside1{
+        grid-area: aside1;
+    }
+    #aside2{
+        grid-area: aside2;
+    }
+    footer{
+        grid-area: footer;
+    }
+    .center{
+        text-align: center;
+    }
+    .font1{
+        font-size: 1.5rem;
+    }
+    .font2{
+        font-size: 2rem;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <nav class="bdr center font1">
+            Home Services About Contact
+        </nav>
+        <section class="bdr center font1">
+            <h2>
+                Hello World ! ThIs is a First Fully Responsive Website I Made!
+            </h2>
+            <p class="center font2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi maiores ab at accusantium voluptatibus cumque, distinctio magni nam id vel voluptate neque modi et dolorum mollitia consequuntur ea esse maxime expedita excepturi molestias vero incidunt illum. Dicta error harum reiciendis necessitatibus minus asperiores eum placeat molestiae dolorum blanditiis dolorem incidunt mollitia fuga voluptates dolor cupiditate, nostrum quasi, id consequatur, qui consequuntur obcaecati. Earum fuga fugiat quisquam architecto quod est assumenda obcaecati repellendus rem repudiandae! Unde explicabo quo, asperiores quam quisquam voluptates ipsa rem quas blanditiis temporibus illum neque voluptatem ad enim dignissimos, beatae molestiae hic officia ullam commodi, officiis consectetur!</p>
+        </section>
+        <aside class="bdr center font1" id="aside1">
+            <h2>
+                More About Us !
+            </h2>
+            <p class="center font2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat animi perspiciatis et quos mollitia quidem, consequuntur eaque tempora? Ducimus culpa quasi magni nesciunt perspiciatis minima consequuntur, laudantium sint, in quos, possimus saepe vitae veniam iusto. Error consectetur esse et eveniet! Officiis doloremque molestiae labore, optio vero ab nesciunt tempore eos.</p>
+        </aside>
+        <aside class="bdr center font1" id="aside2">
+            <h2>
+                We can do it  !
+            </h2>
+            <p class="center font2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat animi perspiciatis et quos mollitia quidem, consequuntur eaque tempora? Ducimus culpa quasi magni nesciunt perspiciatis minima consequuntur, laudantium sint, in quos, possimus saepe vitae veniam iusto. Error consectetur esse et eveniet! Officiis doloremque molestiae labore, optio vero ab nesciunt tempore eos.</p>
+        </aside>
+        <footer class="bdr center font1">Copyright &copy; Pratham Agarwal. All rights reserved!</footer>
+    </div>
+</body>
+
+</html>

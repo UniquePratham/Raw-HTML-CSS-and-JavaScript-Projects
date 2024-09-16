@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterators in JavaScript Tutorial</title>
+</head>
+
+<body>
+    <script>
+        console.log('This is Iterators in JavaScript Tutorial');
+        // Iterators
+
+        function fruitsIterator(values) {
+            let nextIndex = 0;
+            // This function returns an object
+            return {
+                //This object again has a function name next
+                next: function () {
+                    //This function again returns an object satisfying if-else 
+                    if (nextIndex < values.length) {
+                        return {
+                            value: values[nextIndex++],
+                            done: false
+                        }
+                    }
+                    else {
+                        return {
+                            done: true
+                        }
+                    }
+                }
+            }
+        }
+
+        const myArray = ['Apples', 'Grapes', 'Oranges', 'Mangoes'];
+        console.log("My Array is ", myArray);
+
+        // Using the Iterator 
+        const fruits = fruitsIterator(myArray);
+        // console.log(fruits.next());
+        // console.log(fruits.next());
+        // console.log(fruits.next());
+        // console.log(fruits.next());
+        // console.log(fruits.next());
+        console.log(fruits.next().value);
+        console.log(fruits.next().value);
+        console.log(fruits.next().value);
+        console.log(fruits.next().value);
+        console.log(fruits.next().value);
+    </script>
+</body>
+
+</html>

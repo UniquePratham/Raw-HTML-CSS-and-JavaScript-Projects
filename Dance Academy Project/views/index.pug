@@ -1,0 +1,62 @@
+doctype html
+html 
+    head 
+        title Bright Dance Academy-BDA
+        link(rel="icon" type="image/x-icon" href="/static/favicon.ico")
+        style 
+            include ../static/style.css
+    body 
+        nav#navbar
+                ul 
+                    div#logo
+                        img(src="/static/dlogo.png", alt="BDA")
+                        | BDA
+                    li #[a(href="/") Home ]
+                    li #[a(href="#missionSection") About]
+                    li #[a(href="#missionSection") ClassInfo]
+                    li #[a(href="#sponsorsSection") Services]
+                    li #[a(href="/") Contact Us]
+        section#introSection
+                h1(class="welcomeTo welcome") Welcome
+                marquee(behavior="scroll", direction="right",scrollamount="12") 
+                        h1(id="Quote") See the Music, Hear the Dance ...
+                h1(class="welcomeTo To") To 
+                img(src="../static/bright.png", alt="Bright")#Bright
+        section#missionSection
+                h2 Our Mission
+                div.container
+                    div.card
+                        h3 Dance Perfection
+                        div.cardBox
+                            div.cardImg
+                                img(src="/static/dlogo1.png", alt="Dance Perfection")
+                            div.cardContent
+                                p This is the Best Dance Academy for your Dance Perfection. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repudiandae soluta voluptatem officia porro amet deserunt placeat at totam eius voluptas unde itaque labore quae, distinction 
+                    div.card
+                        h3 Dance The Way, You Like!
+                        div.cardBox
+                            div.cardImg
+                                img(src="/static/dlogo2.png", alt="Dance Perfection")
+                            div.cardContent
+                                p You should & You can Dance as the Way, You Like! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit eveniet ab doloremque officiis adipisci asperiores dolorem. Aspernatur dolor odio accusantium totam nostrum architecto, 
+                    div.card
+                        h3 Expert Teaching 
+                        div.cardBox
+                            div.cardImg
+                                img(src="/static/dlogo3.png", alt="Dance Perfection")
+                            div.cardContent
+                                p Teaching Experts & Faculties are with You, Everytime You needed. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, provident debitis! Iure quas eius dolorem enim id esse ex eos, nostrum nobis in et incidunt dolorum aperiam harum dolore porro. 
+        section#sponsorsSection
+                h2 Our Sponsors
+                div#sponsors
+                    div#sponsors1
+                        img(src="/static/plogo1.png", alt="Google" class="spImage")
+                        img(src="/static/plogo2.png", alt="Meta" class="spImage")
+                    div#sponsors2
+                        img(src="/static/plogo3.png", alt="Amazon" class="spImage")
+                        img(src="/static/plogo4.png", alt="Apple" class="spImage")
+                        img(src="/static/plogo5.png", alt="Netflix" class="spImage")
+        footer#footer
+                | CopyRight © 2022 BrightDanceAcademy.com | All Rights Reserved.
+        script 
+            include ../static/index.js

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KeyBoard Project</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="webpageContainer">
+    <div class="inputContainer">
+      <textarea type="text" placeholder="Start Typing in your KeyBoard" id="inputBox"></textarea>
+    </div>
+    <div class="keyboardContainer">
+      <div class="firstRow Row">
+        <button class="btn firstBtn" type="submit" id="Esc">
+          <div class="leftSide">~ `</div>
+          <div class="rightSide">Esc</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F1">
+          <div class="leftSide">! 1</div>
+          <div class="rightSide">F1</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F2">
+          <div class="leftSide">@ 2</div>
+          <div class="rightSide">F2</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F3">
+          <div class="leftSide"># 3</div>
+          <div class="rightSide">F3</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F4">
+          <div class="leftSide">$ 4</div>
+          <div class="rightSide">F4</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F5">
+          <div class="leftSide">% 5</div>
+          <div class="rightSide">F5</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F6">
+          <div class="leftSide">^ 6</div>
+          <div class="rightSide">F6</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F7">
+          <div class="leftSide">& 7</div>
+          <div class="rightSide">F7</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F8">
+          <div class="leftSide">* 8</div>
+          <div class="rightSide">F8</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F9">
+          <div class="leftSide">( 9</div>
+          <div class="rightSide">F9</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F10">
+          <div class="leftSide">) 0</div>
+          <div class="rightSide">F10</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F11">
+          <div class="leftSide">_ -</div>
+          <div class="rightSide">F11</div>
+        </button>
+        <button class="btn firstBtn numBtn" type="submit" id="F12">
+          <div class="leftSide">+ =</div>
+          <div class="rightSide">F12</div>
+        </button>
+        <button class="btn firstBtn" type="submit" id="com">.com</button>
+        <button class="btn firstBtn" type="submit" id="Del">Delete</button>
+      </div>
+      <div class="secondRow Row">
+        <button class="btn secondBtn" type="submit" id="Tab">Tab</button>
+        <button class="btn secondBtn alphabetBtn" type="submit" id="Q">q</button>
+        <button class="btn secondBtn alphabetBtn" type="submit" id="W">w</button>
+        <button class="btn secondBtn alphabetBtn" type="submit" id="E">e</button>
+        <button class="btn secondBtn alphabetBtn" type="submit" id="R">r</button>
+        <button class="btn secondBtn alphabetBtn" type="submit" id="T">t</button>
+        <button class="btn secondBtn alphabetBtn" type="submit" id="Y">y</button>
+        <button class="btn secondBtn alphabetBtn" type="submit" id="U">u</button>
+        <button class="btn secondBtn alphabetBtn" type="submit" id="I">i</button>
+        <button class="btn secondBtn alphabetBtn" type="submit" id="O">o</button>
+        <button class="btn secondBtn alphabetBtn" type="submit" id="P">p</button>
+        <button class="btn secondBtn" type="submit" id="BigCurlyBracLeft">
+          <div class="leftSide">{</div>
+          <div class="rightSide">[</div>
+        </button>
+        <button class="btn secondBtn" type="submit" id="BigCurlyBracRight">
+          <div class="leftSide">}</div>
+          <div class="rightSide">]</div>
+        </button>
+        <button class="btn secondBtn" type="submit" id="BackSlashLine">
+          <div class="leftSide">|</div>
+          <div class="rightSide">\</div>
+        </button>
+        <button class="btn secondBtn" type="submit" id="BackSpace">BackSpace</button>
+      </div>
+      <div class="thirdRow Row">
+        <button class="btn" type="submit" id="CapsLock">CapsLock</button>
+        <button class="btn alphabetBtn" type="submit" id="A">a</button>
+        <button class="btn alphabetBtn" type="submit" id="S">s</button>
+        <button class="btn alphabetBtn" type="submit" id="D">d</button>
+        <button class="btn alphabetBtn" type="submit" id="F">f</button>
+        <button class="btn alphabetBtn" type="submit" id="G">g</button>
+        <button class="btn alphabetBtn" type="submit" id="H">h</button>
+        <button class="btn alphabetBtn" type="submit" id="J">j</button>
+        <button class="btn alphabetBtn" type="submit" id="K">k</button>
+        <button class="btn alphabetBtn" type="submit" id="L">l</button>
+        <button class="btn alphabetBtn" type="submit" id="SemiandColon">
+          <div class="leftSide">:</div>
+          <div class="rightSide">;</div>
+        </button>
+        <button class="btn" type="submit" id="SingleDoubleQuote">
+          <div class="leftSide">"</div>
+          <div class="rightSide">'</div>
+        </button>
+        <button class="btn" type="submit" id="Fn1">Fn</button>
+        <button class="btn" type="submit" id="Enter">Enter</button>
+      </div>
+      <div class="fourthRow Row">
+        <button class="btn fourthBtn" type="submit" id="Shift1">Shift</button>
+        <button class="btn fourthBtn alphabetBtn" type="submit" id="Z">z</button>
+        <button class="btn fourthBtn alphabetBtn" type="submit" id="X">x</button>
+        <button class="btn fourthBtn alphabetBtn" type="submit" id="C">c</button>
+        <button class="btn fourthBtn alphabetBtn" type="submit" id="V">v</button>
+        <button class="btn fourthBtn alphabetBtn" type="submit" id="B">b</button>
+        <button class="btn fourthBtn alphabetBtn" type="submit" id="N">n</button>
+        <button class="btn fourthBtn alphabetBtn" type="submit" id="M">m</button>
+        <button class="btn fourthBtn" type="submit" id="LesserThanComma">
+          <div class="leftSide">
+            < </div>
+              <div class="rightSide">,</div>
+        </button>
+        <button class="btn fourthBtn" type="submit" id="GreaterThanDot">
+          <div class="leftSide">></div>
+          <div class="rightSide">.</div>
+        </button>
+        <button class="btn fourthBtn" type="submit" id="QuestionMarkSlash">
+          <div class="leftSide">?</div>
+          <div class="rightSide">/</div>
+        </button>
+        <button class="btn fourthBtn" type="submit" id="Up">&uparrow; PgUp</button>
+        <button class="btn fourthBtn" type="submit" id="Shift2">Shift</button>
+      </div>
+      <div class="fifthRow Row">
+        <button class="btn" type="submit" id="Control1">Ctrl</button>
+        <button class="btn" type="submit" id="Fn2">Fn</button>
+        <button class="btn" type="submit" id="Win1">Win</button>
+        <button class="btn" type="submit" id="Alt1">Alt</button>
+        <button class="btn" type="submit" id="SpaceBar">SpaceBar</button>
+        <button class="btn" type="submit" id="Alt2">Alt</button>
+        <button class="btn" type="submit" id="Win2">Win</button>
+        <button class="btn" type="submit" id="Left">&leftarrow; Home</button>
+        <button class="btn" type="submit" id="Down">&downarrow; PgDn</button>
+        <button class="btn" type="submit" id="Right">&rightarrow; End</button>
+        <button class="btn" type="submit" id="Control2">Ctrl</button>
+      </div>
+      <!-- <div class="sixthRow Row">
+    
+    </div> -->
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

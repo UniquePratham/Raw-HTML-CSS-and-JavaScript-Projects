@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-3</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>BookTitle With Author</h1>
+        <div id="containers">
+
+        </div>
+    </div>
+    <script>
+        console.log('This is Quiz-3');
+        const datas = [
+            { title: "Ramayan", author: "Valmiki" },
+            { title: "Mahabharat", author: "Rishi Vyasa" }
+        ]
+        function enrollBook(data) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    datas.push(data);
+                    console.log('Book has been enrolled!');
+                    const errored = false;
+                    if (!errored) {
+                        resolve();
+                    }
+                    else {
+                        reject();
+                    }
+                }, 2000);
+            })
+        }
+        function showBook() {
+            let str = ``;
+            container = document.getElementById('containers');
+            datas.forEach(element => {
+                str += `<div>
+                         <span>${element.title}</span>  ---)    
+                         <span>${element.author}</span>
+                        </div> 
+                         `;
+            });
+            container.innerHTML = str;
+            console.log('Students have been showed!');
+        }
+        let newBook = { title: "Geeta", author: "Rishi Vyasa" };
+        enrollBook(newBook).then(showBook).catch(function () {
+            console.log("Error Found!");
+        })
+    </script>
+</body>
+
+</html>

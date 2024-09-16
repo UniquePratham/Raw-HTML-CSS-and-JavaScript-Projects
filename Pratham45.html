@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Date & Time</title>
+</head>
+<style>
+    .container {
+        font-size: 20px;
+        background-color: goldenrod;
+        color: silver;
+        border: 3px solid silver;
+        border-radius: 8px;
+        padding: 15px;
+        text-shadow: 1px 1px black;
+        box-shadow: 2px 2px saddlebrown;
+        text-align: center;
+        display: block;
+        width: 700px;
+        margin: auto;
+    }
+
+    #time {
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="container">
+        Current Time is <span id="time"></span>
+    </div>
+    <script>
+        console.log("This is Date & Time Tutorial");
+
+        // This is to show current Date & Time
+        let dateNow = new Date();
+        // console.log(dateNow);
+
+        // This is to show particular Date
+        // ("mm-dd-yyyy") ("yyyy-mm-dd")
+        // Its month indexing starts from 1 - Jan & 12 - Dec
+        let dateSelect = new Date("2030-5-03");
+        // console.log(dateSelect);
+
+        // This is to show particular Date & Time
+        // Its month indexing starts from 0 - Jan & 11 - Dec
+        // let dateSelect2=new Date(Year, Month, Date, Hours, Minutes, Seconds);
+        let dateSelect2 = new Date(3020, 5, 25, 23, 4, 5)
+        console.log(dateSelect2);
+
+        // To print  particular year, month, date, hours, minutes or seconds from particular Date & Time 
+        let yr = dateSelect2.getFullYear();
+        // console.log("The year is ", yr);
+        let mon = dateSelect2.getMonth();
+        // console.log("The month is ", ++mon);
+        let dat = dateSelect2.getDate();
+        // console.log("The date is ", dat);
+        let hr = dateSelect2.getHours();
+        console.log("The hour's is ", hr);
+        let min = dateSelect2.getMinutes();
+        // console.log("The minute's is ", min);
+        let sec = dateSelect2.getSeconds();
+        // console.log("The second's is ", sec);
+        let time = dateSelect2.getTime();
+        // console.log("The time is ", time);
+        let day = dateSelect2.getDay();
+        // switch (day) {
+        //     case 1:
+        //         console.log("The day is Monday");
+        //         break;
+        //     case 2:
+        //         console.log("The day is Tuesday");
+        //         break;
+        //     case 3:
+        //         console.log("The day is Wednesday");
+        //         break;
+        //     case 4:
+        //         console.log("The day is Thursday");
+        //         break;
+        //     case 5:
+        //         console.log("The day is Friday");
+        //         break;
+
+        //     case 6:
+        //         console.log("The day is Saturday");
+        //         break;
+
+        //     case 7:
+        //         console.log("The day is Sunday");
+        //         break;
+
+        //     default:
+        //         console.log("Error! There is no day");
+        //         break;
+        // }        
+
+        // To change particular year, month, date, hours, minutes or seconds from particular Date & Time
+        dateSelect2.setFullYear(3021);
+        dateSelect2.setMonth(8);
+        dateSelect2.setDate(20);
+        // dateSelect2.setHours(5);
+        dateSelect2.setMinutes(55);
+        dateSelect2.setSeconds(29);
+        // console.log(dateSelect2);
+
+        let datNow = Date.now();
+        // console.log(datNow);
+
+        // Showing Running Date & Time Clock on webpage
+        setInterval(updateTime, 1000);
+
+        function updateTime() {
+            time.innerHTML = new Date();
+        }
+        // Time-stamp
+        // This is number of seconds since 1 January 1970
+        let timeStamp = dateSelect2.getTime();
+    </script>
+</body>
+
+</html>
