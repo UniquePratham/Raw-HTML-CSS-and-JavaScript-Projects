@@ -1,3 +1,8 @@
 node_modules/
 Funngro/
 
+
+# Added by repo hygiene pass
+.env
+.env.local
+__pycache__/
